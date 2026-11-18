@@ -33,7 +33,14 @@ const returnRequestSchema = new mongoose.Schema(
     ],
     reason: {
       type: String,
-      enum: ['wrong_size', 'fit_preference', 'fabric_defect', 'stitch_defect', 'wrong_item', 'other'],
+      enum: [
+        'wrong_size',
+        'fit_preference',
+        'fabric_defect',
+        'stitch_defect',
+        'wrong_item',
+        'other',
+      ],
       required: true,
     },
     note: { type: String, maxlength: 1000, default: '' },

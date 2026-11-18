@@ -5,9 +5,9 @@ for (const kind of ['ADMIN', 'MERCHANT', 'CUSTOMER']) {
   good[`STAGING_${kind}_PASSWORD`] = 'staging-tests-only-12345';
 }
 test('bootstrap refuses production databases even with staging flag', () => {
-  expect(() => settings({ ...good, MONGODB_URI: 'mongodb://localhost:27017/null_commerce' })).toThrow(
-    'totmart_staging',
-  );
+  expect(() =>
+    settings({ ...good, MONGODB_URI: 'mongodb://localhost:27017/null_commerce' }),
+  ).toThrow('totmart_staging');
   expect(() => settings({ ...good, APP_ENV: 'production' })).toThrow('staging');
 });
 test('bootstrap validates credentials and creates distinct role contracts', () => {

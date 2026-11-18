@@ -23,9 +23,7 @@ const customizationSchema = Joi.object({
     .valid('none', 'left_cuff', 'hem', 'inner_neck', 'chest_pocket')
     .default('none'),
   innerLabelText: Joi.string().trim().max(30).allow('').default(''),
-  giftBoxType: Joi.string()
-    .valid('none', 'minimal_kraft', 'atelier_linen')
-    .default('none'),
+  giftBoxType: Joi.string().valid('none', 'minimal_kraft', 'atelier_linen').default('none'),
   giftNote: Joi.string().trim().max(250).allow('').default(''),
 }).unknown(false);
 
@@ -58,7 +56,15 @@ function giftFor(value) {
 
 function customizationFor(value) {
   if (value?.toObject) value = value.toObject();
-  if (!value || (typeof value === 'object' && !value.enabled && !value.monogramText && !value.innerLabelText && (!value.giftBoxType || value.giftBoxType === 'none') && !value.giftNote)) {
+  if (
+    !value ||
+    (typeof value === 'object' &&
+      !value.enabled &&
+      !value.monogramText &&
+      !value.innerLabelText &&
+      (!value.giftBoxType || value.giftBoxType === 'none') &&
+      !value.giftNote)
+  ) {
     return {
       enabled: false,
       monogramText: '',

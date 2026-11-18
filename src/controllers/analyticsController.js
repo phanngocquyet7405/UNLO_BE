@@ -24,7 +24,9 @@ class AnalyticsController {
           .select('name sku stock selledNumber price costBreakdown ropThreshold')
           .lean(),
         Campaign.find().select('title type moqTarget currentOrderedQty status endAt').lean(),
-        B2BQuote.find().select('quoteCode companyName status quotedTotalAmount totalEstimatedQty').lean(),
+        B2BQuote.find()
+          .select('quoteCode companyName status quotedTotalAmount totalEstimatedQty')
+          .lean(),
         ReturnRequest.find().select('type status refundAmount createdAt').lean(),
       ]);
 
@@ -59,8 +61,10 @@ class AnalyticsController {
         const created = new Date(o.createdAt);
         for (const p of o.products || []) {
           const key = String(p.productId);
-          if (created >= days21Ago) sold21Map.set(key, (sold21Map.get(key) || 0) + (p.quantity || 0));
-          if (created >= days14Ago) sold14Map.set(key, (sold14Map.get(key) || 0) + (p.quantity || 0));
+          if (created >= days21Ago)
+            sold21Map.set(key, (sold21Map.get(key) || 0) + (p.quantity || 0));
+          if (created >= days14Ago)
+            sold14Map.set(key, (sold14Map.get(key) || 0) + (p.quantity || 0));
         }
       }
 
@@ -181,9 +185,7 @@ class AnalyticsController {
       }
       const order = await Order.findById(orderId);
       if (!order) fail('Đơn hàng không tồn tại', 404);
-      const line = order.products.find(
-        (p) => p.lineId === lineId || String(p._id) === lineId,
-      );
+      const line = order.products.find((p) => p.lineId === lineId || String(p._id) === lineId);
       if (!line || !line.customization?.enabled) {
         fail('Không tìm thấy dòng sản phẩm cần cá nhân hóa', 404);
       }

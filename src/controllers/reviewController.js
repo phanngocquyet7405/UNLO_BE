@@ -6,9 +6,7 @@ const { fail } = require('../services/pricingService');
 async function recomputeProductRating(productId) {
   const reviews = await Rating.find({ productId }).select('rating fitRating').lean();
   const count = reviews.length;
-  const avg = count
-    ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / count) * 10) / 10
-    : 0;
+  const avg = count ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / count) * 10) / 10 : 0;
   const fitSummary = { runs_small: 0, true_to_size: 0, runs_large: 0 };
   for (const r of reviews) {
     if (fitSummary[r.fitRating] !== undefined) fitSummary[r.fitRating] += 1;
@@ -75,7 +73,9 @@ class ReviewController {
       const fitRating = ['runs_small', 'true_to_size', 'runs_large'].includes(req.body.fitRating)
         ? req.body.fitRating
         : 'true_to_size';
-      const comment = String(req.body.comment || '').trim().slice(0, 1500);
+      const comment = String(req.body.comment || '')
+        .trim()
+        .slice(0, 1500);
       const reviewerHeightCm = req.body.reviewerHeightCm ? Number(req.body.reviewerHeightCm) : null;
       const reviewerWeightKg = req.body.reviewerWeightKg ? Number(req.body.reviewerWeightKg) : null;
       const imgs = Array.isArray(req.body.imgs)

@@ -81,9 +81,7 @@ const campaignSchema = new mongoose.Schema(
 );
 
 campaignSchema.index({ status: 1, endAt: 1 });
-campaignSchema.methods.resolveCurrentUnitPrice = function resolveCurrentUnitPrice(
-  extraQty = 0,
-) {
+campaignSchema.methods.resolveCurrentUnitPrice = function resolveCurrentUnitPrice(extraQty = 0) {
   const projectedQty = (this.currentOrderedQty || 0) + extraQty;
   const tiers = [...(this.pricingTiers || [])].sort((a, b) => b.minQty - a.minQty);
   const matched = tiers.find((t) => projectedQty >= t.minQty);

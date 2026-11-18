@@ -173,13 +173,17 @@ class ProductController {
       }
       if (req.query.material) {
         filter.materialTag = {
-          $regex: String(req.query.material).trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+          $regex: String(req.query.material)
+            .trim()
+            .replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
           $options: 'i',
         };
       }
       if (req.query.collection) {
         filter.collectionTag = {
-          $regex: String(req.query.collection).trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+          $regex: String(req.query.collection)
+            .trim()
+            .replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
           $options: 'i',
         };
       }
@@ -197,7 +201,9 @@ class ProductController {
           if (sizes.length) variantFilter.size = { $in: sizes };
         }
         if (req.query.color) {
-          const color = String(req.query.color).trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const color = String(req.query.color)
+            .trim()
+            .replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
           variantFilter.colorName = { $regex: color, $options: 'i' };
         }
         if (req.query.inStockOnly === 'true') variantFilter.stock = { $gt: 0 };
@@ -313,7 +319,16 @@ class ProductController {
     try {
       const product = await Product.findById(req.params._id);
       if (!product || product.archivedAt) fail('Sản phẩm không tồn tại', 404);
-      const { sku, colorName, colorHex, size, priceDelta = 0, stock = 0, ropThreshold = 10, images = [] } = req.body;
+      const {
+        sku,
+        colorName,
+        colorHex,
+        size,
+        priceDelta = 0,
+        stock = 0,
+        ropThreshold = 10,
+        images = [],
+      } = req.body;
       if (!sku || !colorName || !size) fail('Thiếu thông tin sku, colorName hoặc size');
       const variant = await ProductVariant.create({
         productId: product._id,
@@ -340,7 +355,16 @@ class ProductController {
         productId: req.params._id,
       });
       if (!variant) fail('Biến thể không tồn tại', 404);
-      const allowed = ['sku', 'colorName', 'colorHex', 'size', 'priceDelta', 'ropThreshold', 'images', 'isActive'];
+      const allowed = [
+        'sku',
+        'colorName',
+        'colorHex',
+        'size',
+        'priceDelta',
+        'ropThreshold',
+        'images',
+        'isActive',
+      ];
       for (const field of allowed) {
         if (req.body[field] !== undefined) variant[field] = req.body[field];
       }

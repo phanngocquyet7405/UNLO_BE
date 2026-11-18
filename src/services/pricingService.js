@@ -160,12 +160,8 @@ async function loadAndValidateVariantsAndCampaigns(normalized, session) {
   ].sort();
 
   const [variantDocs, campaignDocs] = await Promise.all([
-    variantIds.length
-      ? ProductVariant.find({ _id: { $in: variantIds } }).session(session)
-      : [],
-    campaignIds.length
-      ? Campaign.find({ _id: { $in: campaignIds } }).session(session)
-      : [],
+    variantIds.length ? ProductVariant.find({ _id: { $in: variantIds } }).session(session) : [],
+    campaignIds.length ? Campaign.find({ _id: { $in: campaignIds } }).session(session) : [],
   ]);
 
   const variantMap = new Map(variantDocs.map((v) => [String(v._id), v]));
@@ -196,9 +192,7 @@ function calculateStandaloneBulkDiscounts(normalized, productFor, variantMap, ca
     );
   const bulkAmounts = new Map();
   for (const [id, quantity] of quantities) {
-    const linesOfProduct = normalized.filter(
-      (i) => String(i.productId) === id && !i.campaignId,
-    );
+    const linesOfProduct = normalized.filter((i) => String(i.productId) === id && !i.campaignId);
     const weights = linesOfProduct.map((i) => {
       const variant = i.variantId ? variantMap.get(String(i.variantId)) : null;
       return commerce.safeMoney(unitPrice(productFor(id), variant, null) * i.quantity);
@@ -310,7 +304,10 @@ function expandLineItemsAndBoxes(
     } else {
       const p = productFor(item.productId);
       const variant = item.variantId ? variantMap.get(String(item.variantId)) : null;
-      if (item.variantId && (!variant || !variant.isActive || String(variant.productId) !== String(p._id))) {
+      if (
+        item.variantId &&
+        (!variant || !variant.isActive || String(variant.productId) !== String(p._id))
+      ) {
         fail('Biến thể (Màu / Size) không tồn tại hoặc không thuộc sản phẩm này');
       }
       const campaign = item.campaignId ? campaignMap.get(String(item.campaignId)) : null;
@@ -498,7 +495,10 @@ async function buildQuote(items, couponCode, session = null, claim = false) {
     new Set([...standaloneIds, ...boxProductIds]),
     session,
   );
-  const { variantMap, campaignMap } = await loadAndValidateVariantsAndCampaigns(normalized, session);
+  const { variantMap, campaignMap } = await loadAndValidateVariantsAndCampaigns(
+    normalized,
+    session,
+  );
   const { quantities, bulkAmounts } = calculateStandaloneBulkDiscounts(
     normalized,
     productFor,

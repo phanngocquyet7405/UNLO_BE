@@ -109,7 +109,10 @@ const sizeGuideSchema = joi.object({
   unit: joi.string().max(20).optional(),
   modelInfo: joi.string().max(300).allow('').optional(),
   headers: joi.array().items(joi.string().max(80)).optional(),
-  rows: joi.array().items(joi.array().items(joi.string().max(80))).optional(),
+  rows: joi
+    .array()
+    .items(joi.array().items(joi.string().max(80)))
+    .optional(),
 });
 
 const personalizationConfigSchema = joi.object({
@@ -138,7 +141,10 @@ const productSchema = joi.object({
   sku: joi.string().max(100).allow('').optional(),
   salePercent: joi.number().min(0).max(100).optional(),
   brand: joi.string().max(100).required(),
-  fitType: joi.string().valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard').optional(),
+  fitType: joi
+    .string()
+    .valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard')
+    .optional(),
   materialTag: joi.string().max(80).allow('').optional(),
   collectionTag: joi.string().max(80).allow('').optional(),
   isPreOrderOnly: joi.boolean().optional(),
@@ -173,7 +179,10 @@ const productUpdateSchema = joi
     sku: joi.string().max(100).allow('').optional(),
     salePercent: joi.number().min(0).max(100).optional(),
     brand: joi.string().max(100).optional(),
-    fitType: joi.string().valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard').optional(),
+    fitType: joi
+      .string()
+      .valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard')
+      .optional(),
     materialTag: joi.string().max(80).allow('').optional(),
     collectionTag: joi.string().max(80).allow('').optional(),
     isPreOrderOnly: joi.boolean().optional(),

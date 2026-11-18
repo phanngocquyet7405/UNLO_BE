@@ -271,7 +271,7 @@ describe('NU:LL Minimalist Fashion M2C, Personalization, Group-Buy, B2B & RMA In
       })
       .expect(200);
 
-    const orderRes = await request(app)
+    await request(app)
       .post('/api/checkout/check-out')
       .set('Authorization', buyerAAuth)
       .set('Idempotency-Key', crypto.randomUUID())
@@ -282,10 +282,7 @@ describe('NU:LL Minimalist Fashion M2C, Personalization, Group-Buy, B2B & RMA In
     expect(updatedCamp.currentOrderedQty).toBe(2);
 
     // Mark order as paid, then trigger MOQ failure -> must enqueue ReceiptRefund
-    await Order.updateMany(
-      { campaignId },
-      { $set: { paymentStatus: 'paid' } },
-    );
+    await Order.updateMany({ campaignId }, { $set: { paymentStatus: 'paid' } });
 
     const refundRes = await request(app)
       .post(`/api/campaigns/${campaignId}/trigger-moq-refund`)

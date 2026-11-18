@@ -3,12 +3,13 @@ const { ReferralProfile, ReferralCommission } = require('../models/Referral');
 const { fail } = require('../services/pricingService');
 
 function makeCode(name = '') {
-  const prefix = String(name || 'NULL')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^A-Za-z0-9]/g, '')
-    .toUpperCase()
-    .slice(0, 5) || 'NULL';
+  const prefix =
+    String(name || 'NULL')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^A-Za-z0-9]/g, '')
+      .toUpperCase()
+      .slice(0, 5) || 'NULL';
   return `${prefix}${crypto.randomBytes(2).toString('hex').toUpperCase()}`;
 }
 
@@ -37,7 +38,9 @@ class ReferralController {
 
   async validateCode(req, res, next) {
     try {
-      const code = String(req.params.code || '').trim().toUpperCase();
+      const code = String(req.params.code || '')
+        .trim()
+        .toUpperCase();
       const profile = await ReferralProfile.findOneAndUpdate(
         { code, isActive: true },
         { $inc: { totalClicks: 1 } },

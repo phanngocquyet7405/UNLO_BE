@@ -5,7 +5,12 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 router.get('/', campaignController.list);
 router.get('/:idOrSlug', campaignController.getDetail);
-router.post('/', authMiddleware.authenticate, authMiddleware.requireAdmin, campaignController.create);
+router.post(
+  '/',
+  authMiddleware.authenticate,
+  authMiddleware.requireAdmin,
+  campaignController.create,
+);
 router.patch(
   '/:_id/stage',
   authMiddleware.authenticate,

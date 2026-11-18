@@ -16,7 +16,14 @@ function generateRmaCode() {
 class ReturnController {
   async createRequest(req, res, next) {
     try {
-      const { orderId, type = 'exchange_size', items = [], reason = 'wrong_size', note = '', evidenceImages = [] } = req.body;
+      const {
+        orderId,
+        type = 'exchange_size',
+        items = [],
+        reason = 'wrong_size',
+        note = '',
+        evidenceImages = [],
+      } = req.body;
       const order = await Order.findOne({ _id: orderId, userId: req.userId });
       if (!order) fail('Đơn hàng không tồn tại', 404);
       if (!['delivered', 'completed'].includes(order.status)) {

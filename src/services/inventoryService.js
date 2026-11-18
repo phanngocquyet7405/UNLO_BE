@@ -35,7 +35,8 @@ async function deductStock(products, session, boxes = []) {
         },
         { session, new: true },
       );
-      if (!updatedCampaign) fail(`Chiến dịch "${item.name}" đã đủ số lượng tối đa hoặc đã đóng`, 409);
+      if (!updatedCampaign)
+        fail(`Chiến dịch "${item.name}" đã đủ số lượng tối đa hoặc đã đóng`, 409);
       touchedCampaigns.add(String(item.campaignId));
       if (
         updatedCampaign.status === 'active' &&

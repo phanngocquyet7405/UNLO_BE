@@ -8,6 +8,9 @@ router.use(authMiddleware.requireAdmin);
 
 router.get('/analytics/unit-economics', analyticsController.unitEconomics);
 router.get('/personalization-queue', analyticsController.personalizationQueue);
-router.patch('/personalization-queue/:orderId/:lineId', analyticsController.updatePersonalizationStatus);
+router.patch(
+  '/personalization-queue/:orderId/:lineId',
+  analyticsController.updatePersonalizationStatus,
+);
 
 module.exports = router;

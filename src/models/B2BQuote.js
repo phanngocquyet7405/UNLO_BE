@@ -53,7 +53,10 @@ const b2bQuoteSchema = new mongoose.Schema(
     depositPercent: { type: Number, default: 50, min: 0, max: 100 },
     depositPaidAmount: { type: Number, default: 0, min: 0 },
     balancePaidAmount: { type: Number, default: 0, min: 0 },
-    paymentTerms: { type: String, default: 'Đặt cọc 50% khi ký xác nhận, 50% khi nghiệm thu giao hàng' },
+    paymentTerms: {
+      type: String,
+      default: 'Đặt cọc 50% khi ký xác nhận, 50% khi nghiệm thu giao hàng',
+    },
     adminNotes: { type: String, default: '' },
     handledBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
     statusHistory: [
