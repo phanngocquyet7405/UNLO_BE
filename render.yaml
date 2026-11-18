@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: totmart-api
+    name: unlo-api
     runtime: docker
     region: singapore
     plan: free
-    branch: master
+    branch: main
     autoDeploy: true
     healthCheckPath: /api/home/live
     dockerfilePath: ./Dockerfile
@@ -33,7 +33,7 @@ services:
       - key: CHECKOUT_SESSION_EXPIRY_MINUTES
         value: '15'
       - key: REDIS_NAMESPACE
-        value: totmart:production
+        value: unlo:production
       - key: REDIS_KEEP_ALIVE_MS
         value: '30000'
       - key: REDIS_PING_INTERVAL_MS
