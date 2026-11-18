@@ -165,7 +165,18 @@ class ProductController {
           .slice(0, 100);
       if (keyword)
         filter.name = { $regex: keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), $options: 'i' };
-      if (req.query.category) filter.category = req.query.category;
+      if (req.query.category) {
+        const catVal = String(req.query.category).trim();
+        if (/^[0-9a-fA-F]{24}$/.test(catVal)) {
+          filter.category = catVal;
+        } else {
+          const cat = await Category.findOne({ slug: catVal });
+          filter.category = cat ? cat._id : new (Category.base.Types.ObjectId)();
+        }
+      } else if (req.query.categorySlug) {
+        const cat = await Category.findOne({ slug: String(req.query.categorySlug).trim() });
+        filter.category = cat ? cat._id : new (Category.base.Types.ObjectId)();
+      }
       if (req.query.brand) filter.brand = req.query.brand;
       if (req.query.brandSlug) {
         const brand = await Brand.findOne({ slug: req.query.brandSlug });
