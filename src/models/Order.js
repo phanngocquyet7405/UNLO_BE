@@ -1,0 +1,210 @@
+const mongoose = require('mongoose');
+
+const orderSchema = new mongoose.Schema(
+  {
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    customerEmail: { type: String },
+
+    boxes: [
+      {
+        boxId: { type: mongoose.Schema.Types.ObjectId, ref: 'Box' },
+        name: String,
+        quantity: Number,
+      },
+    ],
+    refundReference: String,
+    refundedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    products: [
+      {
+        productId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Product',
+          required: true,
+        },
+        variantId: { type: mongoose.Schema.Types.ObjectId, ref: 'ProductVariant', default: null },
+        variantSummary: {
+          sku: { type: String, default: '' },
+          colorName: { type: String, default: '' },
+          colorHex: { type: String, default: '' },
+          size: { type: String, default: '' },
+        },
+        campaignId: { type: mongoose.Schema.Types.ObjectId, ref: 'Campaign', default: null },
+        name: { type: String, required: true },
+        lineId: String,
+        boxId: { type: mongoose.Schema.Types.ObjectId, ref: 'Box' },
+        gift: {
+          wrap: { type: String, enum: ['none', 'classic', 'eco', 'premium'], default: 'none' },
+          message: { type: String, maxlength: 500, default: '' },
+        },
+        giftFee: { type: Number, default: 0, min: 0 },
+        customization: {
+          enabled: { type: Boolean, default: false },
+          monogramText: { type: String, maxlength: 5, default: '' },
+          font: { type: String, default: 'serif_minimal' },
+          threadColor: { type: String, default: '' },
+          placement: { type: String, default: 'none' },
+          innerLabelText: { type: String, maxlength: 30, default: '' },
+          giftBoxType: { type: String, default: 'none' },
+          giftNote: { type: String, maxlength: 250, default: '' },
+          workStatus: {
+            type: String,
+            enum: ['not_required', 'pending_work', 'in_embroidery', 'qc_passed', 'packed'],
+            default: 'not_required',
+          },
+        },
+        personalizationFee: { type: Number, default: 0, min: 0 },
+        bulkDiscountAmount: { type: Number, default: 0, min: 0 },
+        unitPrice: { type: Number, required: true },
+        quantity: { type: Number, default: 1 },
+        brand: { type: mongoose.Schema.Types.ObjectId, ref: 'Brand' },
+        totalPrice: { type: Number, required: true },
+      },
+    ],
+
+    orderId: { type: String, required: true, unique: true },
+
+    status: {
+      type: String,
+      enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled', 'returned', 'on_hold'],
+      default: 'pending',
+    },
+
+    stockDeducted: { type: Boolean, default: false },
+    totalAmount: { type: Number, required: true },
+    shippingFee: { type: Number, default: 0 },
+    shippingPayment: { type: String, enum: ['platform', 'customer_to_carrier'] },
+    shippingMode: { type: String, enum: ['separate', 'legacy_fixed'] },
+    giftFee: { type: Number, default: 0, min: 0 },
+    personalizationFee: { type: Number, default: 0, min: 0 },
+    bulkDiscountAmount: { type: Number, default: 0, min: 0 },
+    orderType: {
+      type: String,
+      enum: ['retail', 'pre_order', 'group_buy', 'b2b'],
+      default: 'retail',
+    },
+    campaignId: { type: mongoose.Schema.Types.ObjectId, ref: 'Campaign', default: null },
+    referralCode: { type: String, default: null },
+    affiliateUserId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
+    pricingPolicyVersion: String,
+    discountAmount: { type: Number, default: 0 },
+    isOverpaid: { type: Boolean, default: false },
+    overpaidAmount: { type: Number, default: 0 },
+
+    shippingAddress: {
+      fullName: { type: String },
+      phone: { type: String },
+      address: { type: String },
+      district: { type: String },
+      city: { type: String },
+      country: { type: String },
+      zipCode: { type: String },
+    },
+
+    paymentMethod: { type: String, enum: ['cod', 'online'], default: 'cod' },
+    paymentStatus: {
+      type: String,
+      enum: ['pending', 'paid', 'failed'],
+      default: 'pending',
+    },
+    paidReferenceCode: { type: String, unique: true, sparse: true },
+
+    note: { type: String },
+    couponCode: { type: String },
+
+    confirmedAt: { type: Date, default: null },
+    paidAt: { type: Date, default: null },
+    shippedAt: { type: Date, default: null },
+    trackingReference: { type: String, maxlength: 150 },
+    deliveryConfirmedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    codCollectionStatus: {
+      type: String,
+      enum: ['not_reported', 'pending_review', 'confirmed'],
+      default: 'not_reported',
+    },
+    deliveredAt: { type: Date, default: null },
+    cancelledAt: { type: Date, default: null },
+    returnedAt: { type: Date, default: null },
+
+    cancelReason: { type: String, default: null },
+    cancelledBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null,
+    },
+
+    merchantId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    paymentCode: { type: String, required: true },
+
+    refundStatus: {
+      type: String,
+      enum: ['not_applicable', 'pending', 'completed'],
+      default: 'not_applicable',
+    },
+    refundAmount: { type: Number, default: null },
+    refundedAt: { type: Date, default: null },
+
+    statusHistory: [
+      {
+        status: { type: String, required: true },
+        changedAt: { type: Date, default: Date.now },
+        changedBy: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'User',
+          default: null,
+        },
+        note: { type: String },
+      },
+    ],
+  },
+  {
+    timestamps: true,
+    optimisticConcurrency: true,
+  },
+);
+
+orderSchema.index({ paymentCode: 1 });
+orderSchema.index({ userId: 1, createdAt: -1 });
+orderSchema.index({ status: 1, paymentMethod: 1 });
+orderSchema.index({ refundStatus: 1 });
+orderSchema.index({ merchantId: 1, createdAt: -1 });
+
+orderSchema.pre('save', function (next) {
+  const now = new Date();
+
+  if (this.isModified('status')) {
+    const milestoneField = {
+      processing: 'confirmedAt',
+      shipped: 'shippedAt',
+      delivered: 'deliveredAt',
+      cancelled: 'cancelledAt',
+      returned: 'returnedAt',
+    }[this.status];
+
+    if (milestoneField && !this[milestoneField]) {
+      this[milestoneField] = now;
+    }
+
+    this.statusHistory.push({
+      status: this.status,
+      changedAt: now,
+      changedBy: this._statusChangedBy || null,
+      note: this._statusChangeNote || undefined,
+    });
+  }
+
+  if (this.isModified('paymentStatus') && this.paymentStatus === 'paid' && !this.paidAt) {
+    this.paidAt = now;
+  }
+
+  next();
+});
+
+module.exports = mongoose.model('Order', orderSchema);

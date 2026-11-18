@@ -1,0 +1,69 @@
+{
+  "version": 5,
+  "origin": "artifacts/b01/all-heAQIx",
+  "sourceManifestSha256": "0417c3678b7dedbd4e72b31572eb7c9d4dfca7ba70cece8d3ba345a2c00333ab",
+  "reason": "Phase 5 format: standardized source formatting across the codebase with Prettier per .prettierrc.json without AST or semantic changes; branch totals and covered baselines are strictly preserved without regressions.",
+  "review": {
+    "evidence": "docs/hardening/phase5-format-review.json",
+    "reason": "Standardized source formatting across all files with Prettier; branch counts and coverage invariant preserved without regression.",
+    "previousPolicyVersion": 4
+  },
+  "files": {
+    "src/services/boxDefinitionService.js": {
+      "sourceSha256": "d2242183fba09a972acc58e9edfa852fd412b53f648721a584dfc3c3e035ac2a",
+      "branches": {
+        "total": 95,
+        "covered": 72
+      }
+    },
+    "src/services/checkoutAttemptService.js": {
+      "sourceSha256": "17facf9607844b66fc580f85e38c349a8e1526a48fe4163743eb0f86a5d0f2eb",
+      "branches": {
+        "total": 61,
+        "covered": 54
+      }
+    },
+    "src/services/inventoryService.js": {
+      "sourceSha256": "62fde410b262d6837c74a75400a8d33c1f0c8703ae27caf13c59ade9169e2003",
+      "branches": {
+        "total": 12,
+        "covered": 7
+      }
+    },
+    "src/services/managerCatalogService.js": {
+      "sourceSha256": "ddac5e984758c81dabdf5a3660ac031fb6daa3d4c46ae1d2797789946ffb7035",
+      "branches": {
+        "total": 112,
+        "covered": 77
+      }
+    },
+    "src/services/merchantScope.js": {
+      "sourceSha256": "ca31e6a413b4fad4d3bd16f7604c896bfc0be1876c73a8eda4074db36c740de7",
+      "branches": {
+        "total": 42,
+        "covered": 34
+      }
+    },
+    "src/services/paymentReconciliationService.js": {
+      "sourceSha256": "59250a171945e7e2d5208caed9d727ea91e34cbb46b0019eeee2c3d74c22655c",
+      "branches": {
+        "total": 178,
+        "covered": 114
+      }
+    },
+    "src/services/pricingService.js": {
+      "sourceSha256": "4d22e0a9c85925853001e3c81450a4536a1111226b21df7f0e89c91f2265444d",
+      "branches": {
+        "total": 104,
+        "covered": 93
+      }
+    },
+    "src/services/subscriptionService.js": {
+      "sourceSha256": "2dc1e12dd58b9b545acccf346c1e0b0e9b7a15cbb4e49e2c60128481fa684623",
+      "branches": {
+        "total": 46,
+        "covered": 34
+      }
+    }
+  }
+}

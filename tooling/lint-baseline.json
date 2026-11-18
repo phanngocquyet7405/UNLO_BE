@@ -1,0 +1,1661 @@
+{
+  "eslint": "10.13.0",
+  "policySha256": "a4bbe42a956beb1569056a9f5de9c03e0521921eefc0999685260e10fa751e43",
+  "files": {
+    "jest.config.js": {
+      "sha256": "792a55721036bb124b65cdfb3f2a97757c832ed2131551780f07d9f419f13c22",
+      "issues": [],
+      "lfSha256": "792a55721036bb124b65cdfb3f2a97757c832ed2131551780f07d9f419f13c22"
+    },
+    "eslint.config.cjs": {
+      "sha256": "8cf6705f05951874d0117ccdb712b94f719ec27bbdad34a89774276870e22d1d",
+      "issues": [],
+      "lfSha256": "8cf6705f05951874d0117ccdb712b94f719ec27bbdad34a89774276870e22d1d"
+    },
+    "src\\app.js": {
+      "sha256": "635e468578fbacd870c038138cb2accecdb41d6633c9f91999e675b141bbd45d",
+      "issues": [],
+      "lfSha256": "635e468578fbacd870c038138cb2accecdb41d6633c9f91999e675b141bbd45d"
+    },
+    "src\\config\\authReadPolicy.js": {
+      "sha256": "67c9889a0fd22615d4aca5dac85e9e925ea220fb06d12ecabef4de557fdef886",
+      "issues": [],
+      "lfSha256": "67c9889a0fd22615d4aca5dac85e9e925ea220fb06d12ecabef4de557fdef886"
+    },
+    "src\\config\\database.js": {
+      "sha256": "35026ddbb70b4a908a601369402c49928587d5921e883a2d19934a8c92eec7f1",
+      "issues": [],
+      "lfSha256": "35026ddbb70b4a908a601369402c49928587d5921e883a2d19934a8c92eec7f1"
+    },
+    "src\\config\\environment.js": {
+      "sha256": "199f07cd0122796998fc0d6b702c2da6b05e26f370df0540fa665b2f25bd8cc6",
+      "issues": [],
+      "lfSha256": "199f07cd0122796998fc0d6b702c2da6b05e26f370df0540fa665b2f25bd8cc6"
+    },
+    "src\\config\\environmentChecks.js": {
+      "sha256": "dd5d762dd825ab8d7179d2a015f73f2ea2f6128f0f72557e98d02d94a1d42624",
+      "issues": [],
+      "lfSha256": "dd5d762dd825ab8d7179d2a015f73f2ea2f6128f0f72557e98d02d94a1d42624"
+    },
+    "src\\config\\redis.js": {
+      "sha256": "7cc253ac896c083fc1c0451deb59d361be45da33d3a08814f9c1c78e6bef3890",
+      "issues": [],
+      "lfSha256": "7cc253ac896c083fc1c0451deb59d361be45da33d3a08814f9c1c78e6bef3890"
+    },
+    "src\\config\\resolveEnvironment.js": {
+      "sha256": "99be289cab68ca31c9717fae8c3b36290645809221d372fd3b58f218d32d65d9",
+      "issues": [],
+      "lfSha256": "99be289cab68ca31c9717fae8c3b36290645809221d372fd3b58f218d32d65d9"
+    },
+    "src\\config\\sessionPolicy.js": {
+      "sha256": "8e8ccd6ef81aab47fec4449e5fadfa76464b72f233a6931250269271d09d67b2",
+      "issues": [],
+      "lfSha256": "8e8ccd6ef81aab47fec4449e5fadfa76464b72f233a6931250269271d09d67b2"
+    },
+    "src\\controllers\\adminCommerceController.js": {
+      "sha256": "9df1c817d415e1ae34df70999d53ead7917c5a26e485ec56a29f9982b7885b4b",
+      "issues": [],
+      "lfSha256": "9df1c817d415e1ae34df70999d53ead7917c5a26e485ec56a29f9982b7885b4b"
+    },
+    "src\\controllers\\authController.js": {
+      "sha256": "7ceaf1cb689265239071fb466abe1aba5b21e0718e4c9c9fbe1598e2df518964",
+      "issues": [],
+      "lfSha256": "7ceaf1cb689265239071fb466abe1aba5b21e0718e4c9c9fbe1598e2df518964"
+    },
+    "src\\controllers\\boxController.js": {
+      "sha256": "5687a11ff2fbd505ebd55ca2e6aacd3173fcd2cea2ef73310f5bff0ba0fac60a",
+      "issues": [],
+      "lfSha256": "5687a11ff2fbd505ebd55ca2e6aacd3173fcd2cea2ef73310f5bff0ba0fac60a"
+    },
+    "src\\controllers\\brandController.js": {
+      "sha256": "098914728f094ebb4d9482324a5f14182529321ebf2cfbac36e4dbc847138064",
+      "issues": [],
+      "lfSha256": "098914728f094ebb4d9482324a5f14182529321ebf2cfbac36e4dbc847138064"
+    },
+    "src\\controllers\\cartController.js": {
+      "sha256": "8057a9602c42e96f00d1d313ab596569198c11f9b1762267eca59343d7a5187c",
+      "issues": [],
+      "lfSha256": "8057a9602c42e96f00d1d313ab596569198c11f9b1762267eca59343d7a5187c"
+    },
+    "src\\controllers\\categoryController.js": {
+      "sha256": "b7404b59f860da3c3c633cb9021c9f1650c519805ce532035d8df347b4c07ccc",
+      "issues": [],
+      "lfSha256": "b7404b59f860da3c3c633cb9021c9f1650c519805ce532035d8df347b4c07ccc"
+    },
+    "src\\controllers\\checkOutController.js": {
+      "sha256": "ded7c8f46cfde836689a6b91861fcf0bd6f45b62dd940ac203d8ed0668f7bfab",
+      "issues": [],
+      "lfSha256": "ded7c8f46cfde836689a6b91861fcf0bd6f45b62dd940ac203d8ed0668f7bfab"
+    },
+    "src\\controllers\\couponController.js": {
+      "sha256": "2450105b1359e618ccc9d6dc424adebfe138ecca1bf1589d6731fba896efc49d",
+      "issues": [],
+      "lfSha256": "2450105b1359e618ccc9d6dc424adebfe138ecca1bf1589d6731fba896efc49d"
+    },
+    "src\\controllers\\customerOrderController.js": {
+      "sha256": "d4f9e0ee9bda583a89224d67149dde9e38768682c3c89b23eef8ccbaa1be93c0",
+      "issues": [],
+      "lfSha256": "d4f9e0ee9bda583a89224d67149dde9e38768682c3c89b23eef8ccbaa1be93c0"
+    },
+    "src\\controllers\\healthController.js": {
+      "sha256": "d95b42301dfdfbe3b193d435f62911bb628c9dcd3d94eba0dfe5f0f87e67335d",
+      "issues": [],
+      "lfSha256": "d95b42301dfdfbe3b193d435f62911bb628c9dcd3d94eba0dfe5f0f87e67335d"
+    },
+    "src\\controllers\\managerController.js": {
+      "sha256": "b748bb39df66c9e4439a1553fce93874c8dd9f7185caa0204f3556bbdb7fc1c1",
+      "issues": [],
+      "lfSha256": "b748bb39df66c9e4439a1553fce93874c8dd9f7185caa0204f3556bbdb7fc1c1"
+    },
+    "src\\controllers\\notificationController.js": {
+      "sha256": "a90bbb36184ae50ff88e1ac4c634f910c306e6c645525bd1ccae7e9860cfdbbc",
+      "issues": [],
+      "lfSha256": "a90bbb36184ae50ff88e1ac4c634f910c306e6c645525bd1ccae7e9860cfdbbc"
+    },
+    "src\\controllers\\operationsController.js": {
+      "sha256": "5e60c2417ff668d49667463be6f9b79667932c00d68b1e74e7967cfd7b2f5303",
+      "issues": [],
+      "lfSha256": "5e60c2417ff668d49667463be6f9b79667932c00d68b1e74e7967cfd7b2f5303"
+    },
+    "src\\controllers\\orderAdminController.js": {
+      "sha256": "6b20423e2c9a5dd7b9ddbf63edc2cf305042f439d0f4ccaea69eef5ed64058ae",
+      "issues": [],
+      "lfSha256": "6b20423e2c9a5dd7b9ddbf63edc2cf305042f439d0f4ccaea69eef5ed64058ae"
+    },
+    "src\\controllers\\productController.js": {
+      "sha256": "970ded320be79694ae7324ff5036d0ec42e1663b1fce03026ee8815548aed526",
+      "issues": [],
+      "lfSha256": "970ded320be79694ae7324ff5036d0ec42e1663b1fce03026ee8815548aed526"
+    },
+    "src\\controllers\\reconciliationController.js": {
+      "sha256": "0ed5560c3cadf652ccb727ec0e6947e5a933b251185036d2ce721289c879b18e",
+      "issues": [],
+      "lfSha256": "0ed5560c3cadf652ccb727ec0e6947e5a933b251185036d2ce721289c879b18e"
+    },
+    "src\\controllers\\subcribePlanController.js": {
+      "sha256": "4768ebc26f0158e9727cb7542cd5ae0a17f40a0536fa94e468f2290490a2f809",
+      "issues": [],
+      "lfSha256": "4768ebc26f0158e9727cb7542cd5ae0a17f40a0536fa94e468f2290490a2f809"
+    },
+    "src\\controllers\\subscriptionTemplateController.js": {
+      "sha256": "5ebfd19951fc98e7d287c858337b74669ec3c6da813e11d698f9f92367c60cc7",
+      "issues": [],
+      "lfSha256": "5ebfd19951fc98e7d287c858337b74669ec3c6da813e11d698f9f92367c60cc7"
+    },
+    "src\\controllers\\userController.js": {
+      "sha256": "273b628a25fe25fedbb9d9b3528c0a56e3af6ed9c299e7c3027d67ce78e67fa5",
+      "issues": [],
+      "lfSha256": "273b628a25fe25fedbb9d9b3528c0a56e3af6ed9c299e7c3027d67ce78e67fa5"
+    },
+    "src\\controllers\\userSubscriptionController.js": {
+      "sha256": "4b9c77e95d29896b883c4fa9eec2ba3e4296598d680580753ce4b50fa006083c",
+      "issues": [],
+      "lfSha256": "4b9c77e95d29896b883c4fa9eec2ba3e4296598d680580753ce4b50fa006083c"
+    },
+    "src\\jobs\\deliveryScheduler.js": {
+      "sha256": "c1a99e78b1c7b3e9a1b65a2c1e43c0cae906105019cd88d2b3e1d1d67ddd0456",
+      "issues": [],
+      "lfSha256": "c1a99e78b1c7b3e9a1b65a2c1e43c0cae906105019cd88d2b3e1d1d67ddd0456"
+    },
+    "src\\jobs\\notificationOutboxScheduler.js": {
+      "sha256": "9b31556e19499c043750551e990cc8beeac98c1d198b583b18dcc4df0c20b186",
+      "issues": [],
+      "lfSha256": "9b31556e19499c043750551e990cc8beeac98c1d198b583b18dcc4df0c20b186"
+    },
+    "src\\jobs\\orderExpiryScheduler.js": {
+      "sha256": "f68504e86ffddcafd99c7df682df5ddc3571e8992cc27b357bb2858f4d5d4346",
+      "issues": [],
+      "lfSha256": "f68504e86ffddcafd99c7df682df5ddc3571e8992cc27b357bb2858f4d5d4346"
+    },
+    "src\\jobs\\paymentReconciliationScheduler.js": {
+      "sha256": "a759f3083e53677d7837873264134c70274482d792cc0682e54bb77bf0033570",
+      "issues": [],
+      "lfSha256": "a759f3083e53677d7837873264134c70274482d792cc0682e54bb77bf0033570"
+    },
+    "src\\jobs\\securityOutboxScheduler.js": {
+      "sha256": "dd43a30ac8907c0e4db522ad6f1ae063a8a9adb533defcde3cfda1adc8aedcf0",
+      "issues": [],
+      "lfSha256": "dd43a30ac8907c0e4db522ad6f1ae063a8a9adb533defcde3cfda1adc8aedcf0"
+    },
+    "src\\middleware\\authMiddleware.js": {
+      "sha256": "b79f2bbcc60aafa3ae6522bfe2dc7b3846a6ac6c97c2b33eb144b760ada2105f",
+      "issues": [],
+      "lfSha256": "b79f2bbcc60aafa3ae6522bfe2dc7b3846a6ac6c97c2b33eb144b760ada2105f"
+    },
+    "src\\middleware\\brandLogoUpload.js": {
+      "sha256": "2c4e1de322b8c06a26fc74895140a1327ecfab1ffd406f979a19f0a808bb4c9b",
+      "issues": [],
+      "lfSha256": "2c4e1de322b8c06a26fc74895140a1327ecfab1ffd406f979a19f0a808bb4c9b"
+    },
+    "src\\middleware\\cookieCsrf.js": {
+      "sha256": "87cefb9a39f8a9c3c8799dabf81eb3bf632b0b08bb9a0e8238d200a945d15b80",
+      "issues": [],
+      "lfSha256": "87cefb9a39f8a9c3c8799dabf81eb3bf632b0b08bb9a0e8238d200a945d15b80"
+    },
+    "src\\middleware\\errorHandler.js": {
+      "sha256": "2e0f80fddbe989cffacb24660b2cf915277794e428429c79be88b491a2edc2ea",
+      "issues": [],
+      "lfSha256": "2e0f80fddbe989cffacb24660b2cf915277794e428429c79be88b491a2edc2ea"
+    },
+    "src\\middleware\\managerSchemas.js": {
+      "sha256": "2c24721acf953b21803e4cbbb86b28df24502d3d962ec7b782b47337565b9359",
+      "issues": [],
+      "lfSha256": "2c24721acf953b21803e4cbbb86b28df24502d3d962ec7b782b47337565b9359"
+    },
+    "src\\middleware\\rateLimiter.js": {
+      "sha256": "c16ee09da936dcd8cc9d91cc751a36a4e93d5cd6e6a9461b68f67da1f95f7075",
+      "issues": [],
+      "lfSha256": "c16ee09da936dcd8cc9d91cc751a36a4e93d5cd6e6a9461b68f67da1f95f7075"
+    },
+    "src\\middleware\\reconciliationSchemas.js": {
+      "sha256": "13b4202ba4ec95c66af6c77eff6e8c52cb2cff71f2bc98f61b2289d3d464afc6",
+      "issues": [],
+      "lfSha256": "13b4202ba4ec95c66af6c77eff6e8c52cb2cff71f2bc98f61b2289d3d464afc6"
+    },
+    "src\\middleware\\sepayAuth.js": {
+      "sha256": "1ea7937d99cb7188b84563c28ad8ac6ec1f66f006335a673b5f4003686d8af18",
+      "issues": [],
+      "lfSha256": "1ea7937d99cb7188b84563c28ad8ac6ec1f66f006335a673b5f4003686d8af18"
+    },
+    "src\\middleware\\uploadMiddleware.js": {
+      "sha256": "2b04f3a4f56de560192df6174a224460f1526488dda5febab012d97ac25eea13",
+      "issues": [],
+      "lfSha256": "2b04f3a4f56de560192df6174a224460f1526488dda5febab012d97ac25eea13"
+    },
+    "src\\middleware\\validationHandler.js": {
+      "sha256": "23400416fe6ccc9467a2a32933b0b214aca6678cf30f48a9bc6e392c85afe0b4",
+      "issues": [],
+      "lfSha256": "23400416fe6ccc9467a2a32933b0b214aca6678cf30f48a9bc6e392c85afe0b4"
+    },
+    "src\\middleware\\validationSchemas.js": {
+      "sha256": "894d2c81ed840cedc68e3e1d118089eabb4ed521907ba37c706e1a9bc433c0b3",
+      "issues": [],
+      "lfSha256": "894d2c81ed840cedc68e3e1d118089eabb4ed521907ba37c706e1a9bc433c0b3"
+    },
+    "src\\models\\AuthSession.js": {
+      "sha256": "4e68ba93b0cef83761810833dc54dc80098cb6e89233fc139a6f5623cae2ef82",
+      "issues": [],
+      "lfSha256": "4e68ba93b0cef83761810833dc54dc80098cb6e89233fc139a6f5623cae2ef82"
+    },
+    "src\\models\\Box.js": {
+      "sha256": "cac5555eea9db15e85e274d1e040ec9af303a5c1e2c9285d8298303b5ee9971c",
+      "issues": [],
+      "lfSha256": "cac5555eea9db15e85e274d1e040ec9af303a5c1e2c9285d8298303b5ee9971c"
+    },
+    "src\\models\\BoxVersion.js": {
+      "sha256": "8147b4e4f41ed5cdf15968f3bc6241970b4bd600c81b0861fb9561e0a22def77",
+      "issues": [],
+      "lfSha256": "8147b4e4f41ed5cdf15968f3bc6241970b4bd600c81b0861fb9561e0a22def77"
+    },
+    "src\\models\\Brand.js": {
+      "sha256": "c12b59ec7e987605ecc9f56d0f7ff295a3aaa2f00126fb20243e233222602100",
+      "issues": [],
+      "lfSha256": "c12b59ec7e987605ecc9f56d0f7ff295a3aaa2f00126fb20243e233222602100"
+    },
+    "src\\models\\Cart.js": {
+      "sha256": "848939f19f013d49375ed480b3cdb9b29b36a16486c8576acddcbd5cf975996e",
+      "issues": [],
+      "lfSha256": "848939f19f013d49375ed480b3cdb9b29b36a16486c8576acddcbd5cf975996e"
+    },
+    "src\\models\\Category.js": {
+      "sha256": "f69d3a0c39480ecd4b33824779eb8811a65fd8ac20bfc8851b0eb571de8ddb6b",
+      "issues": [],
+      "lfSha256": "f69d3a0c39480ecd4b33824779eb8811a65fd8ac20bfc8851b0eb571de8ddb6b"
+    },
+    "src\\models\\Checkout.js": {
+      "sha256": "292f33512825ef3c613c9f9c712b61811008caf128d7a4df07e9a3d6371d3fc3",
+      "issues": [],
+      "lfSha256": "292f33512825ef3c613c9f9c712b61811008caf128d7a4df07e9a3d6371d3fc3"
+    },
+    "src\\models\\CheckoutAttempt.js": {
+      "sha256": "d3af60fb104c9135dc18dae9cfd087877b763d317265e225df9c64e186c4ece7",
+      "issues": [],
+      "lfSha256": "d3af60fb104c9135dc18dae9cfd087877b763d317265e225df9c64e186c4ece7"
+    },
+    "src\\models\\Coupon.js": {
+      "sha256": "c8554266810b20ffc57ecb5f7517dee83984b9af16a0678bf6361ee9e6554400",
+      "issues": [],
+      "lfSha256": "c8554266810b20ffc57ecb5f7517dee83984b9af16a0678bf6361ee9e6554400"
+    },
+    "src\\models\\Notification.js": {
+      "sha256": "435f5de386b09357db0beb1be4460133984b0a42cd22f649bc9bf69f261c6ef8",
+      "issues": [],
+      "lfSha256": "435f5de386b09357db0beb1be4460133984b0a42cd22f649bc9bf69f261c6ef8"
+    },
+    "src\\models\\NotificationOutbox.js": {
+      "sha256": "3f3b783ce4adffa025b9adec41e95dac02d6bc32d0c4925d78f259ee6f975dfd",
+      "issues": [],
+      "lfSha256": "3f3b783ce4adffa025b9adec41e95dac02d6bc32d0c4925d78f259ee6f975dfd"
+    },
+    "src\\models\\Order.js": {
+      "sha256": "6ce000db82c11a68b7b4d875a6945c5f21aee1c7284fdea1ce964d23b4d2d64a",
+      "issues": [],
+      "lfSha256": "6ce000db82c11a68b7b4d875a6945c5f21aee1c7284fdea1ce964d23b4d2d64a"
+    },
+    "src\\models\\PaymentAllocation.js": {
+      "sha256": "21c307baced5c9c2a0278de40afafcbd363d97821f7620f298701e8d9cebbd3b",
+      "issues": [],
+      "lfSha256": "21c307baced5c9c2a0278de40afafcbd363d97821f7620f298701e8d9cebbd3b"
+    },
+    "src\\models\\PaymentAudit.js": {
+      "sha256": "e04c2c160bb041da3861e8abc7c7e48cf3adbe1f0b06a624295988bfd03dc6bb",
+      "issues": [],
+      "lfSha256": "e04c2c160bb041da3861e8abc7c7e48cf3adbe1f0b06a624295988bfd03dc6bb"
+    },
+    "src\\models\\PaymentEvent.js": {
+      "sha256": "32992e763d060604e0f3058f8721f99750335f404982efd9ff18a66066b38c2c",
+      "issues": [],
+      "lfSha256": "32992e763d060604e0f3058f8721f99750335f404982efd9ff18a66066b38c2c"
+    },
+    "src\\models\\Product.js": {
+      "sha256": "1c8d56336394560f09187d8f084ed22af269f7d692f91ab7b6c474cf9150f1a7",
+      "issues": [],
+      "lfSha256": "1c8d56336394560f09187d8f084ed22af269f7d692f91ab7b6c474cf9150f1a7"
+    },
+    "src\\models\\Rating.js": {
+      "sha256": "7698ce2a021521a4fc4aca5d759deba17d8cb40f45e61423d72bc3ea141ede23",
+      "issues": [],
+      "lfSha256": "7698ce2a021521a4fc4aca5d759deba17d8cb40f45e61423d72bc3ea141ede23"
+    },
+    "src\\models\\ReceiptRefund.js": {
+      "sha256": "0d3d49de1587f70fac090fec07f01a3843713a302fc3a883fc70abb116d0088c",
+      "issues": [],
+      "lfSha256": "0d3d49de1587f70fac090fec07f01a3843713a302fc3a883fc70abb116d0088c"
+    },
+    "src\\models\\SecurityOutbox.js": {
+      "sha256": "7e1ac98d0a082fac87b17bfb7b2a052dbdd8ee04c96fd62649a0dfa3c9a1a528",
+      "issues": [],
+      "lfSha256": "7e1ac98d0a082fac87b17bfb7b2a052dbdd8ee04c96fd62649a0dfa3c9a1a528"
+    },
+    "src\\models\\SubcribePlan.js": {
+      "sha256": "edfdcd448fa3ca67ab81178a864cf5a91114940baae84b0e2ffdc70c063dad02",
+      "issues": [],
+      "lfSha256": "edfdcd448fa3ca67ab81178a864cf5a91114940baae84b0e2ffdc70c063dad02"
+    },
+    "src\\models\\SubscriptionFulfillment.js": {
+      "sha256": "a67cea0823e7d0073adb5738ff4f06b7d8d1df37e0d3c676af076eec292c814f",
+      "issues": [],
+      "lfSha256": "a67cea0823e7d0073adb5738ff4f06b7d8d1df37e0d3c676af076eec292c814f"
+    },
+    "src\\models\\SubscriptionTemplate.js": {
+      "sha256": "1620bff6ab475d7d73287ce8b514ead18d66ae27dc897dd3677e14b8b3cfe7d9",
+      "issues": [],
+      "lfSha256": "1620bff6ab475d7d73287ce8b514ead18d66ae27dc897dd3677e14b8b3cfe7d9"
+    },
+    "src\\models\\User.js": {
+      "sha256": "546d7644200464a6a63d1c97fe79f6efb1a9758c93c266f7c89e8c6abcbde0ac",
+      "issues": [],
+      "lfSha256": "546d7644200464a6a63d1c97fe79f6efb1a9758c93c266f7c89e8c6abcbde0ac"
+    },
+    "src\\models\\UserSubscription.js": {
+      "sha256": "e2e83421364343fcbed56f7505d1469258545e22b8ae12f6baf05a5f6dcbe39a",
+      "issues": [],
+      "lfSha256": "e2e83421364343fcbed56f7505d1469258545e22b8ae12f6baf05a5f6dcbe39a"
+    },
+    "src\\routes\\adminCommerceRouter.js": {
+      "sha256": "596320c93d830ee230384bc4551eb39147cc0199a541c2ecc01eac39d61e36d4",
+      "issues": [],
+      "lfSha256": "596320c93d830ee230384bc4551eb39147cc0199a541c2ecc01eac39d61e36d4"
+    },
+    "src\\routes\\boxRouter.js": {
+      "sha256": "5c5f73a10820d2f1c965d1d2da3705316e207b7c9063a6c11bb97045b571ddad",
+      "issues": [],
+      "lfSha256": "5c5f73a10820d2f1c965d1d2da3705316e207b7c9063a6c11bb97045b571ddad"
+    },
+    "src\\routes\\brandRouter.js": {
+      "sha256": "baaab6e0bc2d71910600dc2a784dd81de3dfc07ca25d431774e4579573e4f330",
+      "issues": [],
+      "lfSha256": "baaab6e0bc2d71910600dc2a784dd81de3dfc07ca25d431774e4579573e4f330"
+    },
+    "src\\routes\\cartRouter.js": {
+      "sha256": "54aa88db1f162cd7f2d2e998ad942d379442dd6d414f843969f1058d9ce55292",
+      "issues": [],
+      "lfSha256": "54aa88db1f162cd7f2d2e998ad942d379442dd6d414f843969f1058d9ce55292"
+    },
+    "src\\routes\\categoryRouter.js": {
+      "sha256": "6e68f9d716aa20f8e36ff8721230bb998d9fa5f4f39297522abd5d8ec53b7da2",
+      "issues": [],
+      "lfSha256": "6e68f9d716aa20f8e36ff8721230bb998d9fa5f4f39297522abd5d8ec53b7da2"
+    },
+    "src\\routes\\checkOutRouter.js": {
+      "sha256": "2fc2179a4c186b535faef256e29abe72a88fee9c42553ea3775c3d8bfb2e0f3a",
+      "issues": [],
+      "lfSha256": "2fc2179a4c186b535faef256e29abe72a88fee9c42553ea3775c3d8bfb2e0f3a"
+    },
+    "src\\routes\\couponRouter.js": {
+      "sha256": "81c43996e49457498757ca3ac7d57201f31131fbbc42e060cc15ac1c76949ab5",
+      "issues": [],
+      "lfSha256": "81c43996e49457498757ca3ac7d57201f31131fbbc42e060cc15ac1c76949ab5"
+    },
+    "src\\routes\\customerOrderRouter.js": {
+      "sha256": "f705929c5d166d8e4aaaac2e1369250a4fbb722ffc31a31d711415ec74f168da",
+      "issues": [],
+      "lfSha256": "f705929c5d166d8e4aaaac2e1369250a4fbb722ffc31a31d711415ec74f168da"
+    },
+    "src\\routes\\homeRouter.js": {
+      "sha256": "2b5fc5350c87b35e71c7d069f1567d01ef745f75474e97aa02ddd2e22c06dadc",
+      "issues": [],
+      "lfSha256": "2b5fc5350c87b35e71c7d069f1567d01ef745f75474e97aa02ddd2e22c06dadc"
+    },
+    "src\\routes\\index.js": {
+      "sha256": "a17f0fa51909767e0b8cdf5f151c901c69bfbdd8f3b7f74abf6d016da5b7b6ea",
+      "issues": [],
+      "lfSha256": "a17f0fa51909767e0b8cdf5f151c901c69bfbdd8f3b7f74abf6d016da5b7b6ea"
+    },
+    "src\\routes\\managerRouter.js": {
+      "sha256": "3f752d73f05307473c46b25b5ad1387c086cba6615e86819f953bfa9f79a21f5",
+      "issues": [],
+      "lfSha256": "3f752d73f05307473c46b25b5ad1387c086cba6615e86819f953bfa9f79a21f5"
+    },
+    "src\\routes\\notificationRouter.js": {
+      "sha256": "5aef44fd3231e072fe12829ce0b45fbc4a57ef00c3d318404ba24f5f339bf6b7",
+      "issues": [],
+      "lfSha256": "5aef44fd3231e072fe12829ce0b45fbc4a57ef00c3d318404ba24f5f339bf6b7"
+    },
+    "src\\routes\\orderRouter.js": {
+      "sha256": "df8299fabff2fe76d14d0a05d99339a547df317d482568204e1f82bd56bbed73",
+      "issues": [],
+      "lfSha256": "df8299fabff2fe76d14d0a05d99339a547df317d482568204e1f82bd56bbed73"
+    },
+    "src\\routes\\productRouter.js": {
+      "sha256": "208d6b72e077b6925af40c26920b51085955ca154bff512e775c82fd689a5860",
+      "issues": [],
+      "lfSha256": "208d6b72e077b6925af40c26920b51085955ca154bff512e775c82fd689a5860"
+    },
+    "src\\routes\\reconciliationRouter.js": {
+      "sha256": "89d5fe281210ea3f747916840214e0d19b23fc85a7e865d7409fdde22b67e4e5",
+      "issues": [],
+      "lfSha256": "89d5fe281210ea3f747916840214e0d19b23fc85a7e865d7409fdde22b67e4e5"
+    },
+    "src\\routes\\subcribePlanRouter.js": {
+      "sha256": "660c05ab63f88ff591999d04c26fe84217789a78f96a28ac4055a38cfddfbe87",
+      "issues": [],
+      "lfSha256": "660c05ab63f88ff591999d04c26fe84217789a78f96a28ac4055a38cfddfbe87"
+    },
+    "src\\routes\\userRouter.js": {
+      "sha256": "151ef5b1ce4197cf3cdbf6eb923ddf4ce381e1c76344e17a03b88dbbb5080faa",
+      "issues": [],
+      "lfSha256": "151ef5b1ce4197cf3cdbf6eb923ddf4ce381e1c76344e17a03b88dbbb5080faa"
+    },
+    "src\\server.js": {
+      "sha256": "4c320c7990d666f2d2f0c9a5700ce1ae4fdb0992e2037834f34d2958669ce1e9",
+      "issues": [],
+      "lfSha256": "4c320c7990d666f2d2f0c9a5700ce1ae4fdb0992e2037834f34d2958669ce1e9"
+    },
+    "src\\services\\boxDefinitionService.js": {
+      "sha256": "d2242183fba09a972acc58e9edfa852fd412b53f648721a584dfc3c3e035ac2a",
+      "issues": [],
+      "lfSha256": "d2242183fba09a972acc58e9edfa852fd412b53f648721a584dfc3c3e035ac2a"
+    },
+    "src\\services\\checkoutAttemptService.js": {
+      "sha256": "17facf9607844b66fc580f85e38c349a8e1526a48fe4163743eb0f86a5d0f2eb",
+      "issues": [],
+      "lfSha256": "17facf9607844b66fc580f85e38c349a8e1526a48fe4163743eb0f86a5d0f2eb"
+    },
+    "src\\services\\checkoutLifecycle.js": {
+      "sha256": "6ebdbbb252769c13ad5e6c0d03f029fa6d7f4dc44eccdcfb00c7dca7ecd90718",
+      "issues": [],
+      "lfSha256": "6ebdbbb252769c13ad5e6c0d03f029fa6d7f4dc44eccdcfb00c7dca7ecd90718"
+    },
+    "src\\services\\commercePolicy.js": {
+      "sha256": "59b73cdd9c316f427f6874d64f747dd2d366ea5da9bcf1164ed40976a4fb8333",
+      "issues": [],
+      "lfSha256": "59b73cdd9c316f427f6874d64f747dd2d366ea5da9bcf1164ed40976a4fb8333"
+    },
+    "src\\services\\deliverySnapshot.js": {
+      "sha256": "7505385f1860f946a6d60f9785dcbb6935ed61162efd30c24dee40ca40ad95f7",
+      "issues": [],
+      "lfSha256": "7505385f1860f946a6d60f9785dcbb6935ed61162efd30c24dee40ca40ad95f7"
+    },
+    "src\\services\\giftPolicy.js": {
+      "sha256": "6edb4f65140fef63db2ff693c52b3121b6b4e9bc3e9f58de9ee8230305a16c60",
+      "issues": [],
+      "lfSha256": "6edb4f65140fef63db2ff693c52b3121b6b4e9bc3e9f58de9ee8230305a16c60"
+    },
+    "src\\services\\inventoryService.js": {
+      "sha256": "62fde410b262d6837c74a75400a8d33c1f0c8703ae27caf13c59ade9169e2003",
+      "issues": [],
+      "lfSha256": "62fde410b262d6837c74a75400a8d33c1f0c8703ae27caf13c59ade9169e2003"
+    },
+    "src\\services\\managerCatalogService.js": {
+      "sha256": "ddac5e984758c81dabdf5a3660ac031fb6daa3d4c46ae1d2797789946ffb7035",
+      "issues": [],
+      "lfSha256": "ddac5e984758c81dabdf5a3660ac031fb6daa3d4c46ae1d2797789946ffb7035"
+    },
+    "src\\services\\managerService.js": {
+      "sha256": "95673773aef3289408a28eec427e965353230f2893506daa331364d2e2fa0689",
+      "issues": [],
+      "lfSha256": "95673773aef3289408a28eec427e965353230f2893506daa331364d2e2fa0689"
+    },
+    "src\\services\\merchantOrderPolicy.js": {
+      "sha256": "52d3bfbf0e961d2ac73879c6e328a006f8330fcdc37013e847a290da45b884e1",
+      "issues": [],
+      "lfSha256": "52d3bfbf0e961d2ac73879c6e328a006f8330fcdc37013e847a290da45b884e1"
+    },
+    "src\\services\\merchantScope.js": {
+      "sha256": "ca31e6a413b4fad4d3bd16f7604c896bfc0be1876c73a8eda4074db36c740de7",
+      "issues": [],
+      "lfSha256": "ca31e6a413b4fad4d3bd16f7604c896bfc0be1876c73a8eda4074db36c740de7"
+    },
+    "src\\services\\orderFactory.js": {
+      "sha256": "b89f29dd5f9d1af835d03ff27517be8472c99789adc3dd884084bb5c39d6d37e",
+      "issues": [],
+      "lfSha256": "b89f29dd5f9d1af835d03ff27517be8472c99789adc3dd884084bb5c39d6d37e"
+    },
+    "src\\services\\passwordService.js": {
+      "sha256": "f391ed5852101e947b1a14eb402bea7acdc0c09fe6dd3e794fba02267868f22f",
+      "issues": [],
+      "lfSha256": "f391ed5852101e947b1a14eb402bea7acdc0c09fe6dd3e794fba02267868f22f"
+    },
+    "src\\services\\paymentPolicy.js": {
+      "sha256": "224d02adbd44e27bc381b08658c845ee01d73b3fc968f6ffd419dd0ba8605649",
+      "issues": [],
+      "lfSha256": "224d02adbd44e27bc381b08658c845ee01d73b3fc968f6ffd419dd0ba8605649"
+    },
+    "src\\services\\paymentReconciliationService.js": {
+      "sha256": "59250a171945e7e2d5208caed9d727ea91e34cbb46b0019eeee2c3d74c22655c",
+      "issues": [],
+      "lfSha256": "59250a171945e7e2d5208caed9d727ea91e34cbb46b0019eeee2c3d74c22655c"
+    },
+    "src\\services\\pricingService.js": {
+      "sha256": "4d22e0a9c85925853001e3c81450a4536a1111226b21df7f0e89c91f2265444d",
+      "issues": [],
+      "lfSha256": "4d22e0a9c85925853001e3c81450a4536a1111226b21df7f0e89c91f2265444d"
+    },
+    "src\\services\\redisRateLimitStore.js": {
+      "sha256": "1c8a21728a574b5f5c97ec9cdef2279ffab7698455cdd2d4e7172c1ce407bbe3",
+      "issues": [],
+      "lfSha256": "1c8a21728a574b5f5c97ec9cdef2279ffab7698455cdd2d4e7172c1ce407bbe3"
+    },
+    "src\\services\\securityRevocationService.js": {
+      "sha256": "639a8282d00ee7854b13505b646a449c4be4d7f2a3c6fe6da274e77e388da4ba",
+      "issues": [],
+      "lfSha256": "639a8282d00ee7854b13505b646a449c4be4d7f2a3c6fe6da274e77e388da4ba"
+    },
+    "src\\services\\sessionService.js": {
+      "sha256": "af4bff1c2f9cc243bac742aa90b6b18152e1f10aba6491363bbc0baf796b0925",
+      "issues": [],
+      "lfSha256": "af4bff1c2f9cc243bac742aa90b6b18152e1f10aba6491363bbc0baf796b0925"
+    },
+    "src\\services\\stockAdjustment.js": {
+      "sha256": "9e5c74a84c5b6fa3bef3a85c14c5a523f7d90cba70cb342acf9de81c2310813b",
+      "issues": [],
+      "lfSha256": "9e5c74a84c5b6fa3bef3a85c14c5a523f7d90cba70cb342acf9de81c2310813b"
+    },
+    "src\\services\\subscriptionService.js": {
+      "sha256": "2dc1e12dd58b9b545acccf346c1e0b0e9b7a15cbb4e49e2c60128481fa684623",
+      "issues": [],
+      "lfSha256": "2dc1e12dd58b9b545acccf346c1e0b0e9b7a15cbb4e49e2c60128481fa684623"
+    },
+    "src\\services\\userIdentityService.js": {
+      "sha256": "3c940b59ecaa53a144ba5803b767851a065cb2ba5197d5e12f2d07eacdc91a21",
+      "issues": [],
+      "lfSha256": "3c940b59ecaa53a144ba5803b767851a065cb2ba5197d5e12f2d07eacdc91a21"
+    },
+    "src\\utils\\brandLogoStorage.js": {
+      "sha256": "19e97eadbdce1d7dc01d0acce8f215b7e0c59d391a432a067b52e9b36f628de5",
+      "issues": [],
+      "lfSha256": "19e97eadbdce1d7dc01d0acce8f215b7e0c59d391a432a067b52e9b36f628de5"
+    },
+    "src\\utils\\idempotencyKey.js": {
+      "sha256": "a7167e4f8cdd487420a709b8172fc23798ade62149e5ebc94b9a8f971be64d52",
+      "issues": [],
+      "lfSha256": "a7167e4f8cdd487420a709b8172fc23798ade62149e5ebc94b9a8f971be64d52"
+    },
+    "src\\utils\\jwt.js": {
+      "sha256": "760b02507dd5344a23528ceeb3dee777086b50c6a41bfd865b75ee1ea381b663",
+      "issues": [],
+      "lfSha256": "760b02507dd5344a23528ceeb3dee777086b50c6a41bfd865b75ee1ea381b663"
+    },
+    "src\\utils\\logger.js": {
+      "sha256": "3f10ff4b7d0fdb4fc0544d915b0492744b4b934dba22afc5f76dba65961154a8",
+      "issues": [],
+      "lfSha256": "3f10ff4b7d0fdb4fc0544d915b0492744b4b934dba22afc5f76dba65961154a8"
+    },
+    "src\\utils\\logRedaction.js": {
+      "sha256": "7d8b8ba7826bd846883f436975418af70585f0faf64bbaa68ccdd4e3a381234d",
+      "issues": [],
+      "lfSha256": "7d8b8ba7826bd846883f436975418af70585f0faf64bbaa68ccdd4e3a381234d"
+    },
+    "src\\utils\\notify.js": {
+      "sha256": "0d4caf9d6059be4b5186d030297d08fbeb12116953d47fc93de152fe42f44d4e",
+      "issues": [],
+      "lfSha256": "0d4caf9d6059be4b5186d030297d08fbeb12116953d47fc93de152fe42f44d4e"
+    },
+    "src\\utils\\pagination.js": {
+      "sha256": "2a2ef9f7e93cfec860644c524c428c73003a2d43061aa2607a710e1453fa702d",
+      "issues": [],
+      "lfSha256": "2a2ef9f7e93cfec860644c524c428c73003a2d43061aa2607a710e1453fa702d"
+    },
+    "src\\utils\\safeErrorSerializer.js": {
+      "sha256": "8b938447ca3c182d4da68c855e82f4db3536b63d74cd05b0ffb54a28a120c914",
+      "issues": [],
+      "lfSha256": "8b938447ca3c182d4da68c855e82f4db3536b63d74cd05b0ffb54a28a120c914"
+    },
+    "src\\utils\\safeHtml.js": {
+      "sha256": "7cb561ad248d79d295305a82b576233899a3baf05d079fc630b29e2141ca6752",
+      "issues": [],
+      "lfSha256": "7cb561ad248d79d295305a82b576233899a3baf05d079fc630b29e2141ca6752"
+    },
+    "src\\utils\\sendEmail.js": {
+      "sha256": "4d16b153ff1d9d7a40769803863e0aa1bf1964c8c473cefe72f2f087b5b77a9b",
+      "issues": [],
+      "lfSha256": "4d16b153ff1d9d7a40769803863e0aa1bf1964c8c473cefe72f2f087b5b77a9b"
+    },
+    "src\\utils\\transaction.js": {
+      "sha256": "bf2d19415a74df99fcd2e89766eeb5a40466435bbcfd34f3a3796e18b7a406f1",
+      "issues": [],
+      "lfSha256": "bf2d19415a74df99fcd2e89766eeb5a40466435bbcfd34f3a3796e18b7a406f1"
+    },
+    "scripts\\acceptance-server.js": {
+      "sha256": "cda9be8ca902a5904f6660cd6404c4815c49112178030ac6136a8e2e434be9ff",
+      "issues": [],
+      "lfSha256": "cda9be8ca902a5904f6660cd6404c4815c49112178030ac6136a8e2e434be9ff"
+    },
+    "scripts\\benchmark-passwords.js": {
+      "sha256": "f9004ddb0d4c2c57decd385f75db671dcadf56f0ed83a7f39fe1ba651fc83e06",
+      "issues": [],
+      "lfSha256": "f9004ddb0d4c2c57decd385f75db671dcadf56f0ed83a7f39fe1ba651fc83e06"
+    },
+    "scripts\\bootstrap-staging.js": {
+      "sha256": "2a787dcb7365310340badee5f18bdf2428fe34ae0ad70fd5c3379f1fada747b9",
+      "issues": [],
+      "lfSha256": "2a787dcb7365310340badee5f18bdf2428fe34ae0ad70fd5c3379f1fada747b9"
+    },
+    "scripts\\check-commerce-coverage.js": {
+      "sha256": "3685adad0192177abc60d547eb75d2f1782ff15744f9cce0ce0dc4a535f84a59",
+      "issues": [],
+      "lfSha256": "3685adad0192177abc60d547eb75d2f1782ff15744f9cce0ce0dc4a535f84a59"
+    },
+    "scripts\\check-staging-commerce.js": {
+      "sha256": "d1e6eae1efa1dbbb6251bee7c9343f2d04c540eafaa5f42250dc07da7bfbdc82",
+      "issues": [],
+      "lfSha256": "d1e6eae1efa1dbbb6251bee7c9343f2d04c540eafaa5f42250dc07da7bfbdc82"
+    },
+    "scripts\\check-staging.js": {
+      "sha256": "306f981175872875f05cdef6241f9e8517c2b1c8db29b97b87c185ea496c1820",
+      "issues": [],
+      "lfSha256": "306f981175872875f05cdef6241f9e8517c2b1c8db29b97b87c185ea496c1820"
+    },
+    "scripts\\dispatch-operations-alerts.js": {
+      "sha256": "a8fdf7b96c4b21b69ae0855aa0bcadff916ab1937ecf054ab82fa8705b87e092",
+      "issues": [],
+      "lfSha256": "a8fdf7b96c4b21b69ae0855aa0bcadff916ab1937ecf054ab82fa8705b87e092"
+    },
+    "scripts\\drill-backup-disposable.js": {
+      "sha256": "f2b09be5d10b1ed98a0e95cdff87bf72dca7b0c7f6fda83a8b7aa35570b8b629",
+      "issues": [],
+      "lfSha256": "f2b09be5d10b1ed98a0e95cdff87bf72dca7b0c7f6fda83a8b7aa35570b8b629"
+    },
+    "scripts\\evidence-manifest.js": {
+      "sha256": "1145c4f8715942a2f8caf78a89b36a7310a804aeab30995d6ce307310b4e0fb5",
+      "issues": [],
+      "lfSha256": "1145c4f8715942a2f8caf78a89b36a7310a804aeab30995d6ce307310b4e0fb5"
+    },
+    "scripts\\migrate-box-version-fields.js": {
+      "sha256": "c2054fe92b0e53128ce3e60fd8ea1f25f233e29909811656649f2f19e10707b4",
+      "issues": [],
+      "lfSha256": "c2054fe92b0e53128ce3e60fd8ea1f25f233e29909811656649f2f19e10707b4"
+    },
+    "scripts\\migrate-checkouts.js": {
+      "sha256": "b8a14069b107e27ccdb305a776a563971dc2cbc2c5eb12556543960390e1f1bc",
+      "issues": [],
+      "lfSha256": "b8a14069b107e27ccdb305a776a563971dc2cbc2c5eb12556543960390e1f1bc"
+    },
+    "scripts\\migrate-commerce-integrity.js": {
+      "sha256": "6b15001e8ce2d88a101e316ef940e5d028a2972d349b1f9224838d3c69610e73",
+      "issues": [],
+      "lfSha256": "6b15001e8ce2d88a101e316ef940e5d028a2972d349b1f9224838d3c69610e73"
+    },
+    "scripts\\migrate-merchant-ownership.js": {
+      "sha256": "005e4364335e51a6f912c63dbe203d6afd1118eb9bb952d90ca76a81d59b3897",
+      "issues": [],
+      "lfSha256": "005e4364335e51a6f912c63dbe203d6afd1118eb9bb952d90ca76a81d59b3897"
+    },
+    "scripts\\migrate-payment-ledger.js": {
+      "sha256": "e54cadf29cae20fc521beb3a1b007941f074bc47e6c9a14870e53401b13246ea",
+      "issues": [],
+      "lfSha256": "e54cadf29cae20fc521beb3a1b007941f074bc47e6c9a14870e53401b13246ea"
+    },
+    "scripts\\monitor-health.js": {
+      "sha256": "b75f78735dda056413d7267f76ff313af141a27e03b4dc0184bef956790d5097",
+      "issues": [],
+      "lfSha256": "b75f78735dda056413d7267f76ff313af141a27e03b4dc0184bef956790d5097"
+    },
+    "scripts\\quality.js": {
+      "sha256": "6433f42007e5f8c6ed015ee349aaeb9c18ecd98a431a61c0ccdbb223fe38a7f3",
+      "issues": [],
+      "lfSha256": "6433f42007e5f8c6ed015ee349aaeb9c18ecd98a431a61c0ccdbb223fe38a7f3"
+    },
+    "scripts\\review-user-identity.js": {
+      "sha256": "0b35116db7da286dda19105901d4a21bbada218d8c23658475e076e1f2a6c31c",
+      "issues": [],
+      "lfSha256": "0b35116db7da286dda19105901d4a21bbada218d8c23658475e076e1f2a6c31c"
+    },
+    "scripts\\run-be-tests.js": {
+      "sha256": "754a13e908de53e304dc125839cff970a8f280e5be3df171fdd9fc7b1654a376",
+      "issues": [],
+      "lfSha256": "754a13e908de53e304dc125839cff970a8f280e5be3df171fdd9fc7b1654a376"
+    },
+    "scripts\\validate-api.js": {
+      "sha256": "398bc2108e868d5b00e239527d549142bc3022aa910b8130dd176fda015a357c",
+      "issues": [],
+      "lfSha256": "398bc2108e868d5b00e239527d549142bc3022aa910b8130dd176fda015a357c"
+    },
+    "scripts\\verify-be-evidence.js": {
+      "sha256": "00d7f2317bd6eb1ca8360430686acff72dc94f8e7c78bffa2c6cd7ae4e5fa927",
+      "issues": [],
+      "lfSha256": "00d7f2317bd6eb1ca8360430686acff72dc94f8e7c78bffa2c6cd7ae4e5fa927"
+    },
+    "tests\\acceptanceFlows.integration.test.js": {
+      "sha256": "5ae6b192bbcf9f8fbc8c986e352bc5c25195cc681e42699a3fedcdba7721a6d9",
+      "issues": [],
+      "lfSha256": "5ae6b192bbcf9f8fbc8c986e352bc5c25195cc681e42699a3fedcdba7721a6d9"
+    },
+    "tests\\accountLock.test.js": {
+      "sha256": "eefaee628b3fa20dcc06ead1138b255cc05272f159c4e846a9227c15bff0e343",
+      "issues": [],
+      "lfSha256": "eefaee628b3fa20dcc06ead1138b255cc05272f159c4e846a9227c15bff0e343"
+    },
+    "tests\\ajvDependencySecurity.test.js": {
+      "sha256": "31be1daa5aec70be367ab5559b4fa9850d810dd473035c0a01cf50e5ac32c26a",
+      "issues": [],
+      "lfSha256": "31be1daa5aec70be367ab5559b4fa9850d810dd473035c0a01cf50e5ac32c26a"
+    },
+    "tests\\apiContract.test.js": {
+      "sha256": "d753a641bf3630bd30bb827fa6ecad7cb78a2cd6768979a81ef2ea686d09b42b",
+      "issues": [],
+      "lfSha256": "d753a641bf3630bd30bb827fa6ecad7cb78a2cd6768979a81ef2ea686d09b42b"
+    },
+    "tests\\attemptRecovery.integration.test.js": {
+      "sha256": "4365c4579e67dc709591569f9e4f02353629409c1a4299fda81a2b8052bba721",
+      "issues": [],
+      "lfSha256": "4365c4579e67dc709591569f9e4f02353629409c1a4299fda81a2b8052bba721"
+    },
+    "tests\\authBoundary.integration.test.js": {
+      "sha256": "ba9baa215577d0846ef54fc52eadc09fd9d0892afb57616b1bb6fc14acc68b7c",
+      "issues": [],
+      "lfSha256": "ba9baa215577d0846ef54fc52eadc09fd9d0892afb57616b1bb6fc14acc68b7c"
+    },
+    "tests\\authMongoDeadline.integration.test.js": {
+      "sha256": "26348a255256b9280948fe27fd74182fe872f45c33dbb9fef2a20a228f4155b9",
+      "issues": [],
+      "lfSha256": "26348a255256b9280948fe27fd74182fe872f45c33dbb9fef2a20a228f4155b9"
+    },
+    "tests\\boxDefinition.unit.test.js": {
+      "sha256": "1d721d3c6c3bf211f6efecc57c67d7eceaa738ce9357a633c618da5f130420d6",
+      "issues": [],
+      "lfSha256": "1d721d3c6c3bf211f6efecc57c67d7eceaa738ce9357a633c618da5f130420d6"
+    },
+    "tests\\boxSnapshot.unit.test.js": {
+      "sha256": "8b344740b5b74f43e3b0ebd631f0836920721ef7694bf92d92eac0b3d2943420",
+      "issues": [],
+      "lfSha256": "8b344740b5b74f43e3b0ebd631f0836920721ef7694bf92d92eac0b3d2943420"
+    },
+    "tests\\boxVersions.integration.test.js": {
+      "sha256": "16aa021731080e7222981da50969c9adb581fbd3cb9bc7d2150dd1e5d96b6aae",
+      "issues": [],
+      "lfSha256": "16aa021731080e7222981da50969c9adb581fbd3cb9bc7d2150dd1e5d96b6aae"
+    },
+    "tests\\brandLogoUpload.test.js": {
+      "sha256": "b9a16e88663f2ec120369c14dc0a2015526174cebc58624bee88a6e6b5251fcf",
+      "issues": [],
+      "lfSha256": "b9a16e88663f2ec120369c14dc0a2015526174cebc58624bee88a6e6b5251fcf"
+    },
+    "tests\\carrierShipping.integration.test.js": {
+      "sha256": "72055f61a756382066ed96ecb16f976163c653a300adbb70dafddaf8d9ee4c1e",
+      "issues": [],
+      "lfSha256": "72055f61a756382066ed96ecb16f976163c653a300adbb70dafddaf8d9ee4c1e"
+    },
+    "tests\\cartConcurrencyAndValidation.test.js": {
+      "sha256": "ad45da2931c3a4aa407420acb0330405436e38971b5d60dad208e51b61518e51",
+      "issues": [],
+      "lfSha256": "ad45da2931c3a4aa407420acb0330405436e38971b5d60dad208e51b61518e51"
+    },
+    "tests\\cartSync.test.js": {
+      "sha256": "5e8b9906545f29cb306a6a28749252c1af589cd2949831e09acf9d5d4d8e9add",
+      "issues": [],
+      "lfSha256": "5e8b9906545f29cb306a6a28749252c1af589cd2949831e09acf9d5d4d8e9add"
+    },
+    "tests\\checkout.test.js": {
+      "sha256": "f153a4b5f682f5fd69deaf7b3f858c73e6468d33940c9aea980fee4370e2f8c9",
+      "issues": [],
+      "lfSha256": "f153a4b5f682f5fd69deaf7b3f858c73e6468d33940c9aea980fee4370e2f8c9"
+    },
+    "tests\\checkoutDelivery.test.js": {
+      "sha256": "70aaa9eed40f6f04ae88f9470e2933b064ad9b84845fb0cb9c3982cae16e71a7",
+      "issues": [],
+      "lfSha256": "70aaa9eed40f6f04ae88f9470e2933b064ad9b84845fb0cb9c3982cae16e71a7"
+    },
+    "tests\\checkoutSessionFlow.test.js": {
+      "sha256": "7d10f30e0b340a649f3060883008e6ccb366eedd7d0724299c468b4a848ae1bb",
+      "issues": [],
+      "lfSha256": "7d10f30e0b340a649f3060883008e6ccb366eedd7d0724299c468b4a848ae1bb"
+    },
+    "tests\\ciFixtureLifecycle.test.js": {
+      "sha256": "ae7082773e36e67433ea5d76312ba2689a51ea5d5a98d847e3bb8386d571e9c7",
+      "issues": [],
+      "lfSha256": "ae7082773e36e67433ea5d76312ba2689a51ea5d5a98d847e3bb8386d571e9c7"
+    },
+    "tests\\commerce.integration.test.js": {
+      "sha256": "1b091f1dbfdd49e08e7bb4a0cbb664060af45b95c5fe7e59dd2925a0b0b32dd7",
+      "issues": [],
+      "lfSha256": "1b091f1dbfdd49e08e7bb4a0cbb664060af45b95c5fe7e59dd2925a0b0b32dd7"
+    },
+    "tests\\commerceBenchmark.integration.test.js": {
+      "sha256": "b96cb15d0e7413d0e62a5c294aba8c2e4107887a30f0161500da65935cb18a5c",
+      "issues": [],
+      "lfSha256": "b96cb15d0e7413d0e62a5c294aba8c2e4107887a30f0161500da65935cb18a5c"
+    },
+    "tests\\commerceCoverage.test.js": {
+      "sha256": "2995049a37b140b0ca65bff3beee5dc52e59ee19e3b95aa93787c693c348ba24",
+      "issues": [],
+      "lfSha256": "2995049a37b140b0ca65bff3beee5dc52e59ee19e3b95aa93787c693c348ba24"
+    },
+    "tests\\commerceInvariants.integration.test.js": {
+      "sha256": "2ab64be6ba626f31d548d8c96efba0596a00267780848a00f11cbf0410eb8b74",
+      "issues": [],
+      "lfSha256": "2ab64be6ba626f31d548d8c96efba0596a00267780848a00f11cbf0410eb8b74"
+    },
+    "tests\\commerceMigrationC1.integration.test.js": {
+      "sha256": "5812c0f115000c5f09ef0c2280670e0ccc5a45855d85914cb3d8a88e15113f77",
+      "issues": [],
+      "lfSha256": "5812c0f115000c5f09ef0c2280670e0ccc5a45855d85914cb3d8a88e15113f77"
+    },
+    "tests\\commercePolicy.test.js": {
+      "sha256": "7b2e196249e613b81032024bb9065ae81f2d4c1ee38c64a69498cf70770a62b6",
+      "issues": [],
+      "lfSha256": "7b2e196249e613b81032024bb9065ae81f2d4c1ee38c64a69498cf70770a62b6"
+    },
+    "tests\\commerceQuote.unit.test.js": {
+      "sha256": "159da3c1c5cca81336ec6b3ae8034845d25b74e1f4efb59e7b2bc2f7ae95ae12",
+      "issues": [],
+      "lfSha256": "159da3c1c5cca81336ec6b3ae8034845d25b74e1f4efb59e7b2bc2f7ae95ae12"
+    },
+    "tests\\cookieSessions.integration.test.js": {
+      "sha256": "0d506100f066993d585a794a9b1961c8f64bf828f5e7741591898881dea4e8e0",
+      "issues": [],
+      "lfSha256": "0d506100f066993d585a794a9b1961c8f64bf828f5e7741591898881dea4e8e0"
+    },
+    "tests\\cors.test.js": {
+      "sha256": "3c98d611d516ccd3ed46dc3022e3c03449624d6f3f391ea8401683d5d6314af3",
+      "issues": [],
+      "lfSha256": "3c98d611d516ccd3ed46dc3022e3c03449624d6f3f391ea8401683d5d6314af3"
+    },
+    "tests\\customerFeatures.test.js": {
+      "sha256": "0417fdba4bbb9f188dd39192632dbe98417ab2357237175b6bb8e281bb4153a8",
+      "issues": [],
+      "lfSha256": "0417fdba4bbb9f188dd39192632dbe98417ab2357237175b6bb8e281bb4153a8"
+    },
+    "tests\\dbLifecycle.test.js": {
+      "sha256": "e28a2ba886a8f1d2fbf9d7fd80f173364dd746110cb5bddb0430e32fe76131af",
+      "issues": [],
+      "lfSha256": "e28a2ba886a8f1d2fbf9d7fd80f173364dd746110cb5bddb0430e32fe76131af"
+    },
+    "tests\\deliverySnapshot.test.js": {
+      "sha256": "ea26dd92ef02b795cc158a5b3f1900db4a5a2cb2aef4c984eda418bf9080e51c",
+      "issues": [],
+      "lfSha256": "ea26dd92ef02b795cc158a5b3f1900db4a5a2cb2aef4c984eda418bf9080e51c"
+    },
+    "tests\\dependencyParsing.test.js": {
+      "sha256": "49357cf7e25f84c2b8c181c145b2412dee7470017565ba961428e6af0b6063aa",
+      "issues": [],
+      "lfSha256": "49357cf7e25f84c2b8c181c145b2412dee7470017565ba961428e6af0b6063aa"
+    },
+    "tests\\dependencySecurity.test.js": {
+      "sha256": "e9d612b6b11d531efe7e3483e04d8b061a8ab6d020b4168af1c14969049ad363",
+      "issues": [],
+      "lfSha256": "e9d612b6b11d531efe7e3483e04d8b061a8ab6d020b4168af1c14969049ad363"
+    },
+    "tests\\disposableRedis.test.js": {
+      "sha256": "7dd312d44e2a9256afeb7aba1c34facfdf99263dbf0e6a792dc10a8d13ad17de",
+      "issues": [],
+      "lfSha256": "7dd312d44e2a9256afeb7aba1c34facfdf99263dbf0e6a792dc10a8d13ad17de"
+    },
+    "tests\\emailDeliveryB03.test.js": {
+      "sha256": "c03bf00f7ff274ebb9fdce505e603119f2efffd9cee59a1a75909ff3a99816f6",
+      "issues": [],
+      "lfSha256": "c03bf00f7ff274ebb9fdce505e603119f2efffd9cee59a1a75909ff3a99816f6"
+    },
+    "tests\\env.setup.js": {
+      "sha256": "52552fcc8ce13aa2bc0556f1d0bf8107fda95f0dad6b7a23a4320e5c1f10216f",
+      "issues": [],
+      "lfSha256": "52552fcc8ce13aa2bc0556f1d0bf8107fda95f0dad6b7a23a4320e5c1f10216f"
+    },
+    "tests\\environmentChecks.test.js": {
+      "sha256": "b109f0a02d238474202f2260dcec944cbcd1f194d415588d5c4c1e873a8d8b9d",
+      "issues": [],
+      "lfSha256": "b109f0a02d238474202f2260dcec944cbcd1f194d415588d5c4c1e873a8d8b9d"
+    },
+    "tests\\errorDisclosure.test.js": {
+      "sha256": "4d54ad1863f9de23c32545fda8603e69a8f40526cb724e89c7d2e575122b3d4e",
+      "issues": [],
+      "lfSha256": "4d54ad1863f9de23c32545fda8603e69a8f40526cb724e89c7d2e575122b3d4e"
+    },
+    "tests\\evidenceVerification.test.js": {
+      "sha256": "dfe16a9467f7fdb1826f387c1dc17070a6e9f7f7c2a788a7497d14072734dbc5",
+      "issues": [],
+      "lfSha256": "dfe16a9467f7fdb1826f387c1dc17070a6e9f7f7c2a788a7497d14072734dbc5"
+    },
+    "tests\\helpers\\apiContract.js": {
+      "sha256": "d52ef5e2f1ad5b15284b2bb38e2e2eda47e21c3297be0f71bca411015778d974",
+      "issues": [],
+      "lfSha256": "d52ef5e2f1ad5b15284b2bb38e2e2eda47e21c3297be0f71bca411015778d974"
+    },
+    "tests\\helpers\\commerceHttpScenarios.js": {
+      "sha256": "422ecc04b994cccd317f2afd1dd5c19abb3aa0a9da8922c50da791493897ebc2",
+      "issues": [],
+      "lfSha256": "422ecc04b994cccd317f2afd1dd5c19abb3aa0a9da8922c50da791493897ebc2"
+    },
+    "tests\\helpers\\db.js": {
+      "sha256": "7722f0e81d7b1fd91743e4c23c15ea765bb86c72c275b032a1198eaa7dc4ed8d",
+      "issues": [],
+      "lfSha256": "7722f0e81d7b1fd91743e4c23c15ea765bb86c72c275b032a1198eaa7dc4ed8d"
+    },
+    "tests\\helpers\\disposableMongo.js": {
+      "sha256": "a147f626d36e71920958a2716958f9f9d69c963bdf9011c60b16c12663263b96",
+      "issues": [],
+      "lfSha256": "a147f626d36e71920958a2716958f9f9d69c963bdf9011c60b16c12663263b96"
+    },
+    "tests\\helpers\\disposableRedis.js": {
+      "sha256": "b39184862b762de95f4f8883cd89ce46eeb2e534b094a0941ac3acfd41a66671",
+      "issues": [],
+      "lfSha256": "b39184862b762de95f4f8883cd89ce46eeb2e534b094a0941ac3acfd41a66671"
+    },
+    "tests\\helpers\\factories.js": {
+      "sha256": "86ef5509672b20550aaaca78e07c8d837de2710a3a995feb6c623fcbf8f415c5",
+      "issues": [],
+      "lfSha256": "86ef5509672b20550aaaca78e07c8d837de2710a3a995feb6c623fcbf8f415c5"
+    },
+    "tests\\helpers\\http-process.js": {
+      "sha256": "df11d534c52c6f2d5b84d23fb072c38b373f9950b5fbfc091cff5cd68ab81e5e",
+      "issues": [],
+      "lfSha256": "df11d534c52c6f2d5b84d23fb072c38b373f9950b5fbfc091cff5cd68ab81e5e"
+    },
+    "tests\\helpers\\localRedisUrl.js": {
+      "sha256": "1fb37e915da7c3587e381dad46a06c61e8cab6ef04c04797ba8682efd7a0b090",
+      "issues": [],
+      "lfSha256": "1fb37e915da7c3587e381dad46a06c61e8cab6ef04c04797ba8682efd7a0b090"
+    },
+    "tests\\helpers\\noDotenv.js": {
+      "sha256": "6947de273d8b07c60473ff85d3780b78dcda4c248e86518271f774920038cc9b",
+      "issues": [],
+      "lfSha256": "6947de273d8b07c60473ff85d3780b78dcda4c248e86518271f774920038cc9b"
+    },
+    "tests\\helpers\\operations-process.js": {
+      "sha256": "7a3e3aa6e493dfda8c36e5aec64ce5877b5e268574a79da9b92183a514c8a811",
+      "issues": [],
+      "lfSha256": "7a3e3aa6e493dfda8c36e5aec64ce5877b5e268574a79da9b92183a514c8a811"
+    },
+    "tests\\helpers\\ownedIdentityMigrationFixture.js": {
+      "sha256": "358116b5e8a9fe62bb1970606cb9f563f5f4c13135c509016ca7c7a120fb47c0",
+      "issues": [],
+      "lfSha256": "358116b5e8a9fe62bb1970606cb9f563f5f4c13135c509016ca7c7a120fb47c0"
+    },
+    "tests\\helpers\\ownedLegacyIndexFixture.js": {
+      "sha256": "31f8b74a4529b1bc343c37d4c7901ea8d304fed397864a435c3f72a6ba9b1aa2",
+      "issues": [],
+      "lfSha256": "31f8b74a4529b1bc343c37d4c7901ea8d304fed397864a435c3f72a6ba9b1aa2"
+    },
+    "tests\\helpers\\redis-bystander.js": {
+      "sha256": "fe0360d16264b6fbd54758d10373ecb6c61127564e2ed0630f04d6214bb160a8",
+      "issues": [],
+      "lfSha256": "fe0360d16264b6fbd54758d10373ecb6c61127564e2ed0630f04d6214bb160a8"
+    },
+    "tests\\helpers\\refresh-child.js": {
+      "sha256": "b16a24e26b284a4d58092c1504f805ad152cff5d236ac9f3e09fdc60ecb7476d",
+      "issues": [],
+      "lfSha256": "b16a24e26b284a4d58092c1504f805ad152cff5d236ac9f3e09fdc60ecb7476d"
+    },
+    "tests\\helpers\\roundA\\build-candidate.js": {
+      "sha256": "3bbcd6f47e910b15d7858f4accfd1617202c2aa9c464d3a3873003e27896c159",
+      "issues": [],
+      "lfSha256": "3bbcd6f47e910b15d7858f4accfd1617202c2aa9c464d3a3873003e27896c159"
+    },
+    "tests\\helpers\\roundA\\disclosure-guard.js": {
+      "sha256": "038bb95706854d111a86954e26921ecb915b063ad1268a0c14bddacc47c94e3e",
+      "issues": [],
+      "lfSha256": "038bb95706854d111a86954e26921ecb915b063ad1268a0c14bddacc47c94e3e"
+    },
+    "tests\\helpers\\roundA\\image-fixture.js": {
+      "sha256": "e5ba095ad68ab74cc02d4edd70325c247b73f50a7ce4cead2687b55d70a258b3",
+      "issues": [],
+      "lfSha256": "e5ba095ad68ab74cc02d4edd70325c247b73f50a7ce4cead2687b55d70a258b3"
+    },
+    "tests\\helpers\\roundA\\phase1-preflight.js": {
+      "sha256": "0cf859164b507d0a6f9c4500211c5cfdd95caf2a4c2891ce675e7dafeaeaa630",
+      "issues": [],
+      "lfSha256": "0cf859164b507d0a6f9c4500211c5cfdd95caf2a4c2891ce675e7dafeaeaa630"
+    },
+    "tests\\helpers\\roundA\\phase2-topology.js": {
+      "sha256": "b69f00334d8d632ea1ac50741ac3ccc8b6adc115494f48228732f18fd079af08",
+      "issues": [],
+      "lfSha256": "b69f00334d8d632ea1ac50741ac3ccc8b6adc115494f48228732f18fd079af08"
+    },
+    "tests\\helpers\\roundA\\phase3-strict.js": {
+      "sha256": "08eabfe6c39da76de0ca5714ddd5f9f0a26837e8944f2e830022115e3c71b3d7",
+      "issues": [],
+      "lfSha256": "08eabfe6c39da76de0ca5714ddd5f9f0a26837e8944f2e830022115e3c71b3d7"
+    },
+    "tests\\helpers\\roundA\\verify-round-a.js": {
+      "sha256": "3de6e050a035d3f90700783c91e61e550e87a87051d20a5b5b3adab2264ee040",
+      "issues": [],
+      "lfSha256": "3de6e050a035d3f90700783c91e61e550e87a87051d20a5b5b3adab2264ee040"
+    },
+    "tests\\helpers\\roundB\\a1-client.js": {
+      "sha256": "6d06fc6cbe53ab1409c5e2f9a1b9f8aa8712777a9393103b54d69e432a0a01af",
+      "issues": [],
+      "lfSha256": "6d06fc6cbe53ab1409c5e2f9a1b9f8aa8712777a9393103b54d69e432a0a01af"
+    },
+    "tests\\helpers\\roundB\\a1-command.js": {
+      "sha256": "a7c12f6a8f5e9357eaa5b28897c4e1927b017e2e618dc152222f5c85ab1e189c",
+      "issues": [],
+      "lfSha256": "a7c12f6a8f5e9357eaa5b28897c4e1927b017e2e618dc152222f5c85ab1e189c"
+    },
+    "tests\\helpers\\roundB\\a1-duplicate-observer.js": {
+      "sha256": "dec1c59c42f12df0504c710298ff86570bfa4212e52d7226237a9043207342aa",
+      "issues": [],
+      "lfSha256": "dec1c59c42f12df0504c710298ff86570bfa4212e52d7226237a9043207342aa"
+    },
+    "tests\\helpers\\roundB\\a1-entry.js": {
+      "sha256": "708440ef2959f98e8d79834b40634d4d2aecc7837fcb78de53af8e2afe50e238",
+      "issues": [],
+      "lfSha256": "708440ef2959f98e8d79834b40634d4d2aecc7837fcb78de53af8e2afe50e238"
+    },
+    "tests\\helpers\\roundB\\a1-full-preflight.js": {
+      "sha256": "58c2dff973da1e0a3ac434fb8419293d047648d7c377794fb002a91e8204a8ee",
+      "issues": [],
+      "lfSha256": "58c2dff973da1e0a3ac434fb8419293d047648d7c377794fb002a91e8204a8ee"
+    },
+    "tests\\helpers\\roundB\\a1-image.js": {
+      "sha256": "9132ccc41bbef75a9351b3edb5ec2c69aef2cb75f0677bd6a1af3de83599d237",
+      "issues": [],
+      "lfSha256": "9132ccc41bbef75a9351b3edb5ec2c69aef2cb75f0677bd6a1af3de83599d237"
+    },
+    "tests\\helpers\\roundB\\a1-index-regression.js": {
+      "sha256": "9397fbb50f3f8f031cd2c11ae71c46bcf36cc658b717797bd8eaad76699f5703",
+      "issues": [],
+      "lfSha256": "9397fbb50f3f8f031cd2c11ae71c46bcf36cc658b717797bd8eaad76699f5703"
+    },
+    "tests\\helpers\\roundB\\a1-timeline.js": {
+      "sha256": "f4fe41ebf386d93bfc47b2e3d0ca949809e11b4dcb33ed168093f7393dc30ecc",
+      "issues": [],
+      "lfSha256": "f4fe41ebf386d93bfc47b2e3d0ca949809e11b4dcb33ed168093f7393dc30ecc"
+    },
+    "tests\\helpers\\roundB\\a1-verify.js": {
+      "sha256": "147939b9b1cb7cdf598541e1610197c0f0e44c4f15bfa93829dab7ceba36b589",
+      "issues": [],
+      "lfSha256": "147939b9b1cb7cdf598541e1610197c0f0e44c4f15bfa93829dab7ceba36b589"
+    },
+    "tests\\helpers\\roundB\\a1-worker-client.js": {
+      "sha256": "9ce3fb60a04a80ba8d23e2ee668456b19b547130e90b8183326d39e3e10b7f76",
+      "issues": [],
+      "lfSha256": "9ce3fb60a04a80ba8d23e2ee668456b19b547130e90b8183326d39e3e10b7f76"
+    },
+    "tests\\helpers\\roundB\\a1-worker-preload.js": {
+      "sha256": "f1c79bc495a785c52751bd0efd3e5531dc3f8c302ccf621952b9a0c7436eaed0",
+      "issues": [],
+      "lfSha256": "f1c79bc495a785c52751bd0efd3e5531dc3f8c302ccf621952b9a0c7436eaed0"
+    },
+    "tests\\helpers\\roundB\\a1-workers.js": {
+      "sha256": "eaa24aa825f2982ec23425ed078ab2aa4bab628cbe81cd86318e60a8201d1dd9",
+      "issues": [],
+      "lfSha256": "eaa24aa825f2982ec23425ed078ab2aa4bab628cbe81cd86318e60a8201d1dd9"
+    },
+    "tests\\helpers\\roundB\\a2-check.js": {
+      "sha256": "cf6222cba21a527aaad4180420c05f22afbd97663be9aa57a86b5e1250949bc8",
+      "issues": [],
+      "lfSha256": "cf6222cba21a527aaad4180420c05f22afbd97663be9aa57a86b5e1250949bc8"
+    },
+    "tests\\helpers\\roundB\\a2-commit-client.js": {
+      "sha256": "b08200f9c74d5a70a9235edf7871dac3996aaf8c66fba6e0fac62465c74ae834",
+      "issues": [],
+      "lfSha256": "b08200f9c74d5a70a9235edf7871dac3996aaf8c66fba6e0fac62465c74ae834"
+    },
+    "tests\\helpers\\roundB\\a2-commit-image.js": {
+      "sha256": "ee8fde8a439966c7aab5ac317576dd5f62474a3aae6206b770a299caec85d09f",
+      "issues": [],
+      "lfSha256": "ee8fde8a439966c7aab5ac317576dd5f62474a3aae6206b770a299caec85d09f"
+    },
+    "tests\\helpers\\roundB\\a2-commit-observer.js": {
+      "sha256": "cca10d56e4fa973f0e770a5abd61c21f7cbe831f9a2b9a57974d3dda93b7e5c6",
+      "issues": [],
+      "lfSha256": "cca10d56e4fa973f0e770a5abd61c21f7cbe831f9a2b9a57974d3dda93b7e5c6"
+    },
+    "tests\\helpers\\roundB\\a2-coverage-review.js": {
+      "sha256": "0d325eec5ea283fd0c274bde5de326569dc20bcdab213375c3528f7c82555897",
+      "issues": [],
+      "lfSha256": "0d325eec5ea283fd0c274bde5de326569dc20bcdab213375c3528f7c82555897"
+    },
+    "tests\\helpers\\roundB\\a2-delivery.js": {
+      "sha256": "23a25b17347c733cd056ce27279ba92c61963f04ba9082cc21112d44660f95b2",
+      "issues": [],
+      "lfSha256": "23a25b17347c733cd056ce27279ba92c61963f04ba9082cc21112d44660f95b2"
+    },
+    "tests\\helpers\\roundB\\a2-entry.js": {
+      "sha256": "2b1f8a75aab55610c499ccf5be760228ea5e33f35e02668cc9dd703a55078349",
+      "issues": [],
+      "lfSha256": "2b1f8a75aab55610c499ccf5be760228ea5e33f35e02668cc9dd703a55078349"
+    },
+    "tests\\helpers\\roundB\\a2-mongo-proxy.js": {
+      "sha256": "25568ff0e756f959f6bd626e2f1486a007649fbb14022429083d0b3194a6559c",
+      "issues": [],
+      "lfSha256": "25568ff0e756f959f6bd626e2f1486a007649fbb14022429083d0b3194a6559c"
+    },
+    "tests\\helpers\\roundB\\adapter.js": {
+      "sha256": "ed87f51b4bb210fdc027b7a794ea279c3da661c697bfdd18d6e60935ff4ee210",
+      "issues": [],
+      "lfSha256": "ed87f51b4bb210fdc027b7a794ea279c3da661c697bfdd18d6e60935ff4ee210"
+    },
+    "tests\\helpers\\roundB\\auth-csot-client.js": {
+      "sha256": "ca1e0de07711865a32b6c7cd6c6160c589fd271b75b0bd61367fef4fdb76d0ad",
+      "issues": [],
+      "lfSha256": "ca1e0de07711865a32b6c7cd6c6160c589fd271b75b0bd61367fef4fdb76d0ad"
+    },
+    "tests\\helpers\\roundB\\auth-csot-image.js": {
+      "sha256": "6e40322b3bef5f95fffd03410224170453c88a657fa2be8fa0da2cb9654a2d78",
+      "issues": [],
+      "lfSha256": "6e40322b3bef5f95fffd03410224170453c88a657fa2be8fa0da2cb9654a2d78"
+    },
+    "tests\\helpers\\roundB\\build-candidate.js": {
+      "sha256": "dc4999951470d25c76f706de13d7aec0c1eef1fa8b32de0679980a73e172ac41",
+      "issues": [],
+      "lfSha256": "dc4999951470d25c76f706de13d7aec0c1eef1fa8b32de0679980a73e172ac41"
+    },
+    "tests\\helpers\\roundB\\certificates.js": {
+      "sha256": "4e7689c239316ee44227792d607d4b3eb231ce67550f6c02d476dab770189f52",
+      "issues": [],
+      "lfSha256": "4e7689c239316ee44227792d607d4b3eb231ce67550f6c02d476dab770189f52"
+    },
+    "tests\\helpers\\roundB\\checkout-wait-client.js": {
+      "sha256": "7fe94854f242b34f2997148b750f3c4895ed0ad66285a8f13dd39f0d94fa8c5d",
+      "issues": [],
+      "lfSha256": "7fe94854f242b34f2997148b750f3c4895ed0ad66285a8f13dd39f0d94fa8c5d"
+    },
+    "tests\\helpers\\roundB\\checkout-wait-image.js": {
+      "sha256": "147ea0c7c3e3bc862bbfddf786460b9e156c3636900c14d6a820e801206be9fc",
+      "issues": [],
+      "lfSha256": "147ea0c7c3e3bc862bbfddf786460b9e156c3636900c14d6a820e801206be9fc"
+    },
+    "tests\\helpers\\roundB\\client.js": {
+      "sha256": "715c31bffcc24d7ff9d41ea6b6c93c38c66dc1644b401098333e879acdc94f65",
+      "issues": [],
+      "lfSha256": "715c31bffcc24d7ff9d41ea6b6c93c38c66dc1644b401098333e879acdc94f65"
+    },
+    "tests\\helpers\\roundB\\close-backend-client.js": {
+      "sha256": "21b3da8dbcf9a5aade31583dd3108976bf328fe959a5f4dfd167e5cea8451404",
+      "issues": [],
+      "lfSha256": "21b3da8dbcf9a5aade31583dd3108976bf328fe959a5f4dfd167e5cea8451404"
+    },
+    "tests\\helpers\\roundB\\close-backlog.js": {
+      "sha256": "aada2348500187d1d30d81591c04a6db5fa97af7ddb74880795e10778345ff24",
+      "issues": [],
+      "lfSha256": "aada2348500187d1d30d81591c04a6db5fa97af7ddb74880795e10778345ff24"
+    },
+    "tests\\helpers\\roundB\\close-code91.js": {
+      "sha256": "8a995a2eea19ac5cfe067a6b982b7f7a4059cd690c79ba1c72723990a7d3f72a",
+      "issues": [],
+      "lfSha256": "8a995a2eea19ac5cfe067a6b982b7f7a4059cd690c79ba1c72723990a7d3f72a"
+    },
+    "tests\\helpers\\roundB\\close-context.js": {
+      "sha256": "b89a0268a35755229c3dab8d15e70066864579637e4d5d44d6180dfa545c906d",
+      "issues": [],
+      "lfSha256": "b89a0268a35755229c3dab8d15e70066864579637e4d5d44d6180dfa545c906d"
+    },
+    "tests\\helpers\\roundB\\close-entry.js": {
+      "sha256": "e7b88ecec10cf522f06df381164058207d7a20bda3728134e85c3b6b4742e31d",
+      "issues": [],
+      "lfSha256": "e7b88ecec10cf522f06df381164058207d7a20bda3728134e85c3b6b4742e31d"
+    },
+    "tests\\helpers\\roundB\\close-faults.js": {
+      "sha256": "f36ed56e1f67f33a47c0410e2ff4d2c949712b90d0429c8906f2f4a3c5dc5270",
+      "issues": [],
+      "lfSha256": "f36ed56e1f67f33a47c0410e2ff4d2c949712b90d0429c8906f2f4a3c5dc5270"
+    },
+    "tests\\helpers\\roundB\\close-policy.js": {
+      "sha256": "dac4b28406d2f1939f7fd7f1a166350de3fd941b89d05232a904aa9bdb3dd43b",
+      "issues": [],
+      "lfSha256": "dac4b28406d2f1939f7fd7f1a166350de3fd941b89d05232a904aa9bdb3dd43b"
+    },
+    "tests\\helpers\\roundB\\close-run.js": {
+      "sha256": "a643ef00cafd5a85812d612d555f5a6182b505ff32403802464e612ff475f001",
+      "issues": [],
+      "lfSha256": "a643ef00cafd5a85812d612d555f5a6182b505ff32403802464e612ff475f001"
+    },
+    "tests\\helpers\\roundB\\close-runtime-check.js": {
+      "sha256": "0c7db11896ad9f5f4e9f6caf54bd91568807d1a0219b7a5c19ea71d62e55c096",
+      "issues": [],
+      "lfSha256": "0c7db11896ad9f5f4e9f6caf54bd91568807d1a0219b7a5c19ea71d62e55c096"
+    },
+    "tests\\helpers\\roundB\\close-runtime.js": {
+      "sha256": "864899ec6f0d77a7bc87b363cb4a37d00f40950d1346591cfdd22885c7e98be9",
+      "issues": [],
+      "lfSha256": "864899ec6f0d77a7bc87b363cb4a37d00f40950d1346591cfdd22885c7e98be9"
+    },
+    "tests\\helpers\\roundB\\close-seal.js": {
+      "sha256": "05008c4bea2e64e3628b841fc18db170be8d67aa7e659d39ea6e902d35aebdf0",
+      "issues": [],
+      "lfSha256": "05008c4bea2e64e3628b841fc18db170be8d67aa7e659d39ea6e902d35aebdf0"
+    },
+    "tests\\helpers\\roundB\\fault-client.js": {
+      "sha256": "e0e85d665635f0fcb7d4f40990de709ca32ff7fdb5e5e5de9fdfc8382e3ac0d6",
+      "issues": [],
+      "lfSha256": "e0e85d665635f0fcb7d4f40990de709ca32ff7fdb5e5e5de9fdfc8382e3ac0d6"
+    },
+    "tests\\helpers\\roundB\\faults.js": {
+      "sha256": "225253c167e59501593a9707b264a96814f2633c35bfd736dbbffd80d9a10472",
+      "issues": [],
+      "lfSha256": "225253c167e59501593a9707b264a96814f2633c35bfd736dbbffd80d9a10472"
+    },
+    "tests\\helpers\\roundB\\image-fixture.js": {
+      "sha256": "40ba1bd68b66cd7882949f4d3e35a8dca1f7224b7f70b3d5f9fafa9d9f839bd4",
+      "issues": [],
+      "lfSha256": "40ba1bd68b66cd7882949f4d3e35a8dca1f7224b7f70b3d5f9fafa9d9f839bd4"
+    },
+    "tests\\helpers\\roundB\\mongo-evidence-client.js": {
+      "sha256": "9784a05cf487d6cb0d059b04f5a373a47614a438114c12eb76fd6508030a66f2",
+      "issues": [],
+      "lfSha256": "9784a05cf487d6cb0d059b04f5a373a47614a438114c12eb76fd6508030a66f2"
+    },
+    "tests\\helpers\\roundB\\mongo-evidence-runner.js": {
+      "sha256": "f4858ec47ab3dcf8ae4f8fea47f6875e8b3da22315e45add74e15331d5603e99",
+      "issues": [],
+      "lfSha256": "f4858ec47ab3dcf8ae4f8fea47f6875e8b3da22315e45add74e15331d5603e99"
+    },
+    "tests\\helpers\\roundB\\mongo-observer.js": {
+      "sha256": "57f7a9f720b7436afa9b99d45b577ca08171e4354259e2c1c6db6983c9ecca27",
+      "issues": [],
+      "lfSha256": "57f7a9f720b7436afa9b99d45b577ca08171e4354259e2c1c6db6983c9ecca27"
+    },
+    "tests\\helpers\\roundB\\phase5.js": {
+      "sha256": "7f4ff6b9367aa31a6ae945c791ff2a4a0775f92882e81cc1d1f478fb0e7f6b76",
+      "issues": [],
+      "lfSha256": "7f4ff6b9367aa31a6ae945c791ff2a4a0775f92882e81cc1d1f478fb0e7f6b76"
+    },
+    "tests\\helpers\\roundB\\pino-image-client.js": {
+      "sha256": "6c4d776edb306b76549e8c07e5db8a5610bd9fb8f156027a90c0a1890343a6d4",
+      "issues": [],
+      "lfSha256": "6c4d776edb306b76549e8c07e5db8a5610bd9fb8f156027a90c0a1890343a6d4"
+    },
+    "tests\\helpers\\roundB\\pino-image.js": {
+      "sha256": "2720c55694b91e04c3475a77930fbd0a428f49173d384c39c53d0624c190147b",
+      "issues": [],
+      "lfSha256": "2720c55694b91e04c3475a77930fbd0a428f49173d384c39c53d0624c190147b"
+    },
+    "tests\\helpers\\roundB\\strict-image.js": {
+      "sha256": "9ca7078d2f480af3eee94d55893f3e22f0b8fdd7b01e16532949cfa9bc4cee94",
+      "issues": [],
+      "lfSha256": "9ca7078d2f480af3eee94d55893f3e22f0b8fdd7b01e16532949cfa9bc4cee94"
+    },
+    "tests\\helpers\\roundB\\summarize-mongo-evidence.js": {
+      "sha256": "4437e8669515b51693b9570c3eddc5501812d57c19c0c1d5622f09d943ff4b84",
+      "issues": [],
+      "lfSha256": "4437e8669515b51693b9570c3eddc5501812d57c19c0c1d5622f09d943ff4b84"
+    },
+    "tests\\helpers\\roundB\\topology.js": {
+      "sha256": "78f9d40130ed9e88096c4185b891b58b438311d649cb9a6d78548c21afccf6a2",
+      "issues": [],
+      "lfSha256": "78f9d40130ed9e88096c4185b891b58b438311d649cb9a6d78548c21afccf6a2"
+    },
+    "tests\\helpers\\roundB\\verify-auth-csot.js": {
+      "sha256": "cc2ac00a9c2ac2cb62f91e34d4bad994d7978c931cc091848f39235a37478864",
+      "issues": [],
+      "lfSha256": "cc2ac00a9c2ac2cb62f91e34d4bad994d7978c931cc091848f39235a37478864"
+    },
+    "tests\\helpers\\roundB\\verify-delivery.js": {
+      "sha256": "d0c5f44735657308cce891e3bd38875fd36372ff96cc7e36f739f43ddbcd09bc",
+      "issues": [],
+      "lfSha256": "d0c5f44735657308cce891e3bd38875fd36372ff96cc7e36f739f43ddbcd09bc"
+    },
+    "tests\\helpers\\roundC1\\context.js": {
+      "sha256": "199c33289da7b2bd956b61ecea20e21ed811ba774eee8434319af5e8c0fb272b",
+      "issues": [],
+      "lfSha256": "199c33289da7b2bd956b61ecea20e21ed811ba774eee8434319af5e8c0fb272b"
+    },
+    "tests\\helpers\\roundC1\\crash-barrier.js": {
+      "sha256": "3141e6a56c8fe947d691479df01c91e7b909d90ec7c28d93e321087f92aab082",
+      "issues": [],
+      "lfSha256": "3141e6a56c8fe947d691479df01c91e7b909d90ec7c28d93e321087f92aab082"
+    },
+    "tests\\helpers\\roundC1\\finish.js": {
+      "sha256": "2c6ae1de501cb6c8a0a5d2a50ad59f6d4e05c0cd81bfea77d7f2a00a343bcd80",
+      "issues": [],
+      "lfSha256": "2c6ae1de501cb6c8a0a5d2a50ad59f6d4e05c0cd81bfea77d7f2a00a343bcd80"
+    },
+    "tests\\helpers\\roundC1\\identity.js": {
+      "sha256": "bb89dab581e0b87d48e9d6879e45fb7c6b38385c2f2edf8def7db6a82464d89e",
+      "issues": [],
+      "lfSha256": "bb89dab581e0b87d48e9d6879e45fb7c6b38385c2f2edf8def7db6a82464d89e"
+    },
+    "tests\\helpers\\roundC1\\migration-crash.js": {
+      "sha256": "e6925e011169155d007069bdbd86a0c40ce9591fc539e89e866cc96a3287939a",
+      "issues": [],
+      "lfSha256": "e6925e011169155d007069bdbd86a0c40ce9591fc539e89e866cc96a3287939a"
+    },
+    "tests\\helpers\\roundC1\\ops.js": {
+      "sha256": "57a22db3084e8efd51fab5cdc2922de1067ce2bfeb1ebfae597cdc7e141b5f01",
+      "issues": [],
+      "lfSha256": "57a22db3084e8efd51fab5cdc2922de1067ce2bfeb1ebfae597cdc7e141b5f01"
+    },
+    "tests\\helpers\\roundC1\\quality.js": {
+      "sha256": "eba9beb0c3bfc56d1c7452b2ad3128153a4f6003d8d41d8a5fa19958129f75d6",
+      "issues": [],
+      "lfSha256": "eba9beb0c3bfc56d1c7452b2ad3128153a4f6003d8d41d8a5fa19958129f75d6"
+    },
+    "tests\\helpers\\roundC1\\run.js": {
+      "sha256": "e1a344f4145b2981a2fe1909183a7b5f1de8dfdeb77c668cac1cd40c27bdfe0d",
+      "issues": [],
+      "lfSha256": "e1a344f4145b2981a2fe1909183a7b5f1de8dfdeb77c668cac1cd40c27bdfe0d"
+    },
+    "tests\\helpers\\roundC1\\watchdog.js": {
+      "sha256": "a974047ac8d5facae62463cec5035c23d9cd4e9199529b6a146288010c6ee6cc",
+      "issues": [],
+      "lfSha256": "a974047ac8d5facae62463cec5035c23d9cd4e9199529b6a146288010c6ee6cc"
+    },
+    "tests\\helpers\\roundC2\\context.js": {
+      "sha256": "db17f546c12fd74757bddfbb6db2066a8f0f365694c03b34b03f021a807b4b8f",
+      "issues": [],
+      "lfSha256": "db17f546c12fd74757bddfbb6db2066a8f0f365694c03b34b03f021a807b4b8f"
+    },
+    "tests\\helpers\\roundC2\\export.js": {
+      "sha256": "b60b236c54de93db59d4e76674a87194cbb1e8d1305ac07dc5dab227493dc4b8",
+      "issues": [],
+      "lfSha256": "b60b236c54de93db59d4e76674a87194cbb1e8d1305ac07dc5dab227493dc4b8"
+    },
+    "tests\\helpers\\roundC2\\format.js": {
+      "sha256": "80ed49caacbdc1b182c9855155f8873c5081a2b988ee0b1ef3e705dd0a175b79",
+      "issues": [],
+      "lfSha256": "80ed49caacbdc1b182c9855155f8873c5081a2b988ee0b1ef3e705dd0a175b79"
+    },
+    "tests\\helpers\\roundC2\\jest-discovery.js": {
+      "sha256": "5fd0d403b7987dfd93f51b7f26a9e6af7a062fe6b083f715edaebd10809da118",
+      "issues": [],
+      "lfSha256": "5fd0d403b7987dfd93f51b7f26a9e6af7a062fe6b083f715edaebd10809da118"
+    },
+    "tests\\helpers\\roundC2\\manifest.js": {
+      "sha256": "c90f21707910f69099dc325242fa199dc293437dc5db169bdb48eebd72e872b3",
+      "issues": [],
+      "lfSha256": "c90f21707910f69099dc325242fa199dc293437dc5db169bdb48eebd72e872b3"
+    },
+    "tests\\helpers\\roundC2\\mongo-sse.js": {
+      "sha256": "d33d2a5eb27784bd99da902bebf514593b15adaee3b147936da57f882265907c",
+      "issues": [],
+      "lfSha256": "d33d2a5eb27784bd99da902bebf514593b15adaee3b147936da57f882265907c"
+    },
+    "tests\\helpers\\roundC2\\pdf-read.js": {
+      "sha256": "d82b2f0d892880a7b0d5f370d17d947358cb619f3a494a7660ca562e9a580960",
+      "issues": [],
+      "lfSha256": "d82b2f0d892880a7b0d5f370d17d947358cb619f3a494a7660ca562e9a580960"
+    },
+    "tests\\helpers\\roundC2\\policy.js": {
+      "sha256": "579a1c0d0471dc95bdfb77704bf0bd7aeb269b6e9ac18bb96501516b15c46dac",
+      "issues": [],
+      "lfSha256": "579a1c0d0471dc95bdfb77704bf0bd7aeb269b6e9ac18bb96501516b15c46dac"
+    },
+    "tests\\helpers\\roundC2\\run.js": {
+      "sha256": "272801f515d4e71fd0333958917648e28172f8ed492fba2fd933c604a3c1c132",
+      "issues": [],
+      "lfSha256": "272801f515d4e71fd0333958917648e28172f8ed492fba2fd933c604a3c1c132"
+    },
+    "tests\\helpers\\roundC2\\sse-client-observer.js": {
+      "sha256": "640a124a5c3c510ddfcc128bd4e014ca95bd8b0fae63080d5c4f1748501c2624",
+      "issues": [],
+      "lfSha256": "640a124a5c3c510ddfcc128bd4e014ca95bd8b0fae63080d5c4f1748501c2624"
+    },
+    "tests\\helpers\\roundC2\\sse-deadline.js": {
+      "sha256": "c5d45d12ccc08efb8f89a56cd439d5e419909ab5bf0ee5560625f4a91162daad",
+      "issues": [],
+      "lfSha256": "c5d45d12ccc08efb8f89a56cd439d5e419909ab5bf0ee5560625f4a91162daad"
+    },
+    "tests\\helpers\\roundC2\\sse-independent-client.js": {
+      "sha256": "4748236fb9cb95ab280dbc883868a8d117d0bd1e3ab34fd8954b6acaa42bd03f",
+      "issues": [],
+      "lfSha256": "4748236fb9cb95ab280dbc883868a8d117d0bd1e3ab34fd8954b6acaa42bd03f"
+    },
+    "tests\\helpers\\roundC2\\sse-legacy-launcher.js": {
+      "sha256": "348a28f4e441529987b6b6d8d4da2acb27222f9352a92de0927f11203719fec0",
+      "issues": [],
+      "lfSha256": "348a28f4e441529987b6b6d8d4da2acb27222f9352a92de0927f11203719fec0"
+    },
+    "tests\\helpers\\roundC2\\sse-server-observer.js": {
+      "sha256": "ce2f809d3367e79c8a1fae703c3a4cbe35a60fc1e11e72c27d99eea5b15a2470",
+      "issues": [],
+      "lfSha256": "ce2f809d3367e79c8a1fae703c3a4cbe35a60fc1e11e72c27d99eea5b15a2470"
+    },
+    "tests\\helpers\\roundC2\\verify.js": {
+      "sha256": "f3e0e034cabf25bfa3119313099213b39b7cf24aba04ccb9659462f3080251f5",
+      "issues": [],
+      "lfSha256": "f3e0e034cabf25bfa3119313099213b39b7cf24aba04ccb9659462f3080251f5"
+    },
+    "tests\\helpers\\sanitizePayloads.js": {
+      "sha256": "487a2dc65e11deb64c2d223dde44345af22aca01377b7547edb51aec38b9431b",
+      "issues": [],
+      "lfSha256": "487a2dc65e11deb64c2d223dde44345af22aca01377b7547edb51aec38b9431b"
+    },
+    "tests\\helpers\\server-signals.js": {
+      "sha256": "7959754d8f605eda12de86c36c3e461f6c8d635083e95839e529e29384cf75ec",
+      "issues": [],
+      "lfSha256": "7959754d8f605eda12de86c36c3e461f6c8d635083e95839e529e29384cf75ec"
+    },
+    "tests\\httpSetupFailure.test.js": {
+      "sha256": "486d2f20c953d9ad4d040b8799329013a24649bc86638b667511772b97394055",
+      "issues": [],
+      "lfSha256": "486d2f20c953d9ad4d040b8799329013a24649bc86638b667511772b97394055"
+    },
+    "tests\\idempotencyKey.test.js": {
+      "sha256": "a1302918e1cb05920a4386a513c7f310b6564ab8a239d4dd6555c7ed3ae694c0",
+      "issues": [],
+      "lfSha256": "a1302918e1cb05920a4386a513c7f310b6564ab8a239d4dd6555c7ed3ae694c0"
+    },
+    "tests\\identityB03.integration.test.js": {
+      "sha256": "b491b470e5c3dd3dce0105f87933657d607e46613c75df6f813a1589c4e57023",
+      "issues": [],
+      "lfSha256": "b491b470e5c3dd3dce0105f87933657d607e46613c75df6f813a1589c4e57023"
+    },
+    "tests\\identityMigrationB03.test.js": {
+      "sha256": "ebe556c94bc75dfa847508ed0a84ff97c43fed3029834ba00932bda27bf075b6",
+      "issues": [],
+      "lfSha256": "ebe556c94bc75dfa847508ed0a84ff97c43fed3029834ba00932bda27bf075b6"
+    },
+    "tests\\jestDiscovery.test.js": {
+      "sha256": "baab502a43efbc33ac8d678f544304d8893a261cdad687ccec68c0292109e8ca",
+      "issues": [],
+      "lfSha256": "baab502a43efbc33ac8d678f544304d8893a261cdad687ccec68c0292109e8ca"
+    },
+    "tests\\ledger300007.integration.test.js": {
+      "sha256": "c07a969a4746a349aadc54988c2d970eb3762b7c0cdcac24c8e75a1da3595670",
+      "issues": [],
+      "lfSha256": "c07a969a4746a349aadc54988c2d970eb3762b7c0cdcac24c8e75a1da3595670"
+    },
+    "tests\\localRedisUrl.test.js": {
+      "sha256": "26a7f125389c6b3d3d90d0f9ef6856960ebd16b3fa5ab3bd1ebb22dc6083f65a",
+      "issues": [],
+      "lfSha256": "26a7f125389c6b3d3d90d0f9ef6856960ebd16b3fa5ab3bd1ebb22dc6083f65a"
+    },
+    "tests\\logRedaction.test.js": {
+      "sha256": "758827b870aeb80df13fb1dfa398ea78cbdf1a2335a81ed27e290b56b6a015f6",
+      "issues": [],
+      "lfSha256": "758827b870aeb80df13fb1dfa398ea78cbdf1a2335a81ed27e290b56b6a015f6"
+    },
+    "tests\\manager.integration.test.js": {
+      "sha256": "23eabfa1ec0ff63f8dceaaed0b484123c78b16d30e99cf463f0d83ecfd7edb81",
+      "issues": [],
+      "lfSha256": "23eabfa1ec0ff63f8dceaaed0b484123c78b16d30e99cf463f0d83ecfd7edb81"
+    },
+    "tests\\manager.unit.test.js": {
+      "sha256": "f721a9580768beb8373ededdaa392fe2d0cc60fa6d8432c88e8d369dce4e0f3d",
+      "issues": [],
+      "lfSha256": "f721a9580768beb8373ededdaa392fe2d0cc60fa6d8432c88e8d369dce4e0f3d"
+    },
+    "tests\\merchantOrderPolicy.test.js": {
+      "sha256": "3722ed905193a7fd584e3202c3d62a20d3e4bfa1d5f1b82acc6ac7306422c983",
+      "issues": [],
+      "lfSha256": "3722ed905193a7fd584e3202c3d62a20d3e4bfa1d5f1b82acc6ac7306422c983"
+    },
+    "tests\\mergedMerchant.unit.test.js": {
+      "sha256": "914a7552a1989cb53f55f8280e834215a82206c78829cd0e88a1f29df5a6296e",
+      "issues": [],
+      "lfSha256": "914a7552a1989cb53f55f8280e834215a82206c78829cd0e88a1f29df5a6296e"
+    },
+    "tests\\newCheckout.integration.test.js": {
+      "sha256": "6e44c374c5a108182c8e05713f3b1423a38088013a71568649c2d0ed84ecf75e",
+      "issues": [],
+      "lfSha256": "6e44c374c5a108182c8e05713f3b1423a38088013a71568649c2d0ed84ecf75e"
+    },
+    "tests\\operationsB07.integration.test.js": {
+      "sha256": "c38ff2a741801b43423227f24db7b1878efc105c80483a2ffc2465567d409fc0",
+      "issues": [],
+      "lfSha256": "c38ff2a741801b43423227f24db7b1878efc105c80483a2ffc2465567d409fc0"
+    },
+    "tests\\orderAdmin.test.js": {
+      "sha256": "b6f63e6f916de2be71a12e87e2eb1ff913ee9b7f0b5b4eb2b6cfb1694ecd83db",
+      "issues": [],
+      "lfSha256": "b6f63e6f916de2be71a12e87e2eb1ff913ee9b7f0b5b4eb2b6cfb1694ecd83db"
+    },
+    "tests\\orderBrand.test.js": {
+      "sha256": "8543db3d7a7e9ed2f7716befd6bc65a65341c9afbdd200f2dc9682443cfa0d1d",
+      "issues": [],
+      "lfSha256": "8543db3d7a7e9ed2f7716befd6bc65a65341c9afbdd200f2dc9682443cfa0d1d"
+    },
+    "tests\\orderCharacterization.integration.test.js": {
+      "sha256": "521ccbfb202b5a8cf9ada97489035c754f764f1af398f2a5699e6d03cba13d3f",
+      "issues": [],
+      "lfSha256": "521ccbfb202b5a8cf9ada97489035c754f764f1af398f2a5699e6d03cba13d3f"
+    },
+    "tests\\passwordResetStreams.test.js": {
+      "sha256": "96406920f72d729a9f1f3879936159996667950aaee2bb8a140907777fe31699",
+      "issues": [],
+      "lfSha256": "96406920f72d729a9f1f3879936159996667950aaee2bb8a140907777fe31699"
+    },
+    "tests\\paymentPolicy.test.js": {
+      "sha256": "45be7cf3dd42e656f2c3c5091f5fd9fa1a733356bd9b3d22dae483bebd2cc4bd",
+      "issues": [],
+      "lfSha256": "45be7cf3dd42e656f2c3c5091f5fd9fa1a733356bd9b3d22dae483bebd2cc4bd"
+    },
+    "tests\\paymentReconciliation.integration.test.js": {
+      "sha256": "fcb51642ff7958c0e49b2d6f7b07fd72c73d63feb9ed243fdb04feee7920639d",
+      "issues": [],
+      "lfSha256": "fcb51642ff7958c0e49b2d6f7b07fd72c73d63feb9ed243fdb04feee7920639d"
+    },
+    "tests\\prepaidAndPricing.test.js": {
+      "sha256": "177de76ebb28b5855794eca57aabf24ca48f5f7c1c1c0b27d58bb1cda1640999",
+      "issues": [],
+      "lfSha256": "177de76ebb28b5855794eca57aabf24ca48f5f7c1c1c0b27d58bb1cda1640999"
+    },
+    "tests\\productionReadiness.test.js": {
+      "sha256": "3a30296da5923548ddba6f7659f85f9801a82a65ae19840b319eed85522da5b4",
+      "issues": [],
+      "lfSha256": "3a30296da5923548ddba6f7659f85f9801a82a65ae19840b319eed85522da5b4"
+    },
+    "tests\\proxyAndWebhookRateLimit.test.js": {
+      "sha256": "cdac699ffc8ba6a259509e533825a5c1940207790edcc88515f09e0ba2b7dcbd",
+      "issues": [],
+      "lfSha256": "cdac699ffc8ba6a259509e533825a5c1940207790edcc88515f09e0ba2b7dcbd"
+    },
+    "tests\\qrFlow.unit.test.js": {
+      "sha256": "fff4f3e8cc72717663db3ef2b70d72d3a9d77e3b7858d77b9d5db3bc8719f37b",
+      "issues": [],
+      "lfSha256": "fff4f3e8cc72717663db3ef2b70d72d3a9d77e3b7858d77b9d5db3bc8719f37b"
+    },
+    "tests\\quality.test.js": {
+      "sha256": "c615e935cff44e6c88bd07d52866f5944274ef3cb7c6f16e32b485465114e1b9",
+      "issues": [],
+      "lfSha256": "c615e935cff44e6c88bd07d52866f5944274ef3cb7c6f16e32b485465114e1b9"
+    },
+    "tests\\rateLimiter.test.js": {
+      "sha256": "3032c3d9869f79ac0b8434ef6b991272f30a3b35fc866da40788e9b87530471d",
+      "issues": [],
+      "lfSha256": "3032c3d9869f79ac0b8434ef6b991272f30a3b35fc866da40788e9b87530471d"
+    },
+    "tests\\redisHttp.integration.test.js": {
+      "sha256": "8aac8df256fb3cecae40c9d017eccb15da0f7184b4c185c3631874c81e5fe887",
+      "issues": [],
+      "lfSha256": "8aac8df256fb3cecae40c9d017eccb15da0f7184b4c185c3631874c81e5fe887"
+    },
+    "tests\\redisLive.integration.test.js": {
+      "sha256": "d80b6abd6bc5147078f0469baea33b986d60a74acd1402e49f199ffcac8b2a70",
+      "issues": [],
+      "lfSha256": "d80b6abd6bc5147078f0469baea33b986d60a74acd1402e49f199ffcac8b2a70"
+    },
+    "tests\\redisRateLimitStore.test.js": {
+      "sha256": "3db1b51c2d7f579022ecf325245344e78d6d561c0198fa641ec5f7be9b66b83e",
+      "issues": [],
+      "lfSha256": "3db1b51c2d7f579022ecf325245344e78d6d561c0198fa641ec5f7be9b66b83e"
+    },
+    "tests\\refreshFamily.integration.test.js": {
+      "sha256": "298096f7db74c10136dccaaf053ef173b62f8ba874f1964b84aee712638aec63",
+      "issues": [],
+      "lfSha256": "298096f7db74c10136dccaaf053ef173b62f8ba874f1964b84aee712638aec63"
+    },
+    "tests\\registration.test.js": {
+      "sha256": "87518103a299aa03edcd031d62a921de3035fc317c1a57d79f913f5f56e01567",
+      "issues": [],
+      "lfSha256": "87518103a299aa03edcd031d62a921de3035fc317c1a57d79f913f5f56e01567"
+    },
+    "tests\\resolveEnvironment.test.js": {
+      "sha256": "458abb0e6dbdb4af3a14a09060b7e93974fb5bcdb383afa87dd7a85d3cfe9a14",
+      "issues": [],
+      "lfSha256": "458abb0e6dbdb4af3a14a09060b7e93974fb5bcdb383afa87dd7a85d3cfe9a14"
+    },
+    "tests\\roundADisclosureGuard.test.js": {
+      "sha256": "e1eed7c0cb9dfca625ead6504646079b7cda9609859faa16bf51223a89695bea",
+      "issues": [],
+      "lfSha256": "e1eed7c0cb9dfca625ead6504646079b7cda9609859faa16bf51223a89695bea"
+    },
+    "tests\\roundBCloseVerification.test.js": {
+      "sha256": "f863de38b85b98cd6d4c318d5dbdc4751e4b31c20bc0ee1ed8a4a9257f98d043",
+      "issues": [],
+      "lfSha256": "f863de38b85b98cd6d4c318d5dbdc4751e4b31c20bc0ee1ed8a4a9257f98d043"
+    },
+    "tests\\roundBLogGuard.test.js": {
+      "sha256": "b719310eb5578250593574d3d69f1309c9b35f614efaa6ac9265afa9d6249164",
+      "issues": [],
+      "lfSha256": "b719310eb5578250593574d3d69f1309c9b35f614efaa6ac9265afa9d6249164"
+    },
+    "tests\\roundC2Verification.test.js": {
+      "sha256": "1336a512eb6d69e2bac05e4675220e9c9e33b7ce71635560f22f026ff8a3e02c",
+      "issues": [],
+      "lfSha256": "1336a512eb6d69e2bac05e4675220e9c9e33b7ce71635560f22f026ff8a3e02c"
+    },
+    "tests\\security.test.js": {
+      "sha256": "62e42a24e12987a9ef1c2d89b83ecee73aec4e58d86620ba6d976ef6a199a1a1",
+      "issues": [],
+      "lfSha256": "62e42a24e12987a9ef1c2d89b83ecee73aec4e58d86620ba6d976ef6a199a1a1"
+    },
+    "tests\\securityOutbox.integration.test.js": {
+      "sha256": "70ea64d5bc4c6c4566ab16ae6087c0fb14de6c3b5e8c0a9fa34d08e7df84e73a",
+      "issues": [],
+      "lfSha256": "70ea64d5bc4c6c4566ab16ae6087c0fb14de6c3b5e8c0a9fa34d08e7df84e73a"
+    },
+    "tests\\separateDelivery.integration.test.js": {
+      "sha256": "a9ea1f7a39e2c8e15aefaebcfcf8de7f3c115c338257143b697f1ccba19a62bd",
+      "issues": [],
+      "lfSha256": "a9ea1f7a39e2c8e15aefaebcfcf8de7f3c115c338257143b697f1ccba19a62bd"
+    },
+    "tests\\serverBoot.integration.test.js": {
+      "sha256": "f491aa02e435dae7039a6ea4ab31cf9c2efe392af781cebf186a849cd8c23ffa",
+      "issues": [],
+      "lfSha256": "f491aa02e435dae7039a6ea4ab31cf9c2efe392af781cebf186a849cd8c23ffa"
+    },
+    "tests\\sessionPolicy.test.js": {
+      "sha256": "b8c5aca955d45331895a0244ab5189f6c5d2f370b53f9f8d06e9c0420cea6d43",
+      "issues": [],
+      "lfSha256": "b8c5aca955d45331895a0244ab5189f6c5d2f370b53f9f8d06e9c0420cea6d43"
+    },
+    "tests\\sessionProxyFixture.test.js": {
+      "sha256": "1dc077b637f2b66686836862bff534089348e6dec20c95c3efb65d37ae36338c",
+      "issues": [],
+      "lfSha256": "1dc077b637f2b66686836862bff534089348e6dec20c95c3efb65d37ae36338c"
+    },
+    "tests\\sseHarnessDeadline.test.js": {
+      "sha256": "44096077d2805a1868dc8d548cee67d4163eef8cc3f04277b879071fb12227fe",
+      "issues": [],
+      "lfSha256": "44096077d2805a1868dc8d548cee67d4163eef8cc3f04277b879071fb12227fe"
+    },
+    "tests\\sseMongoDeadline.integration.test.js": {
+      "sha256": "e1324b2f85d37a240bdc354635ba658a697cbdeb6fd54eb1cbf020067104e61b",
+      "issues": [],
+      "lfSha256": "e1324b2f85d37a240bdc354635ba658a697cbdeb6fd54eb1cbf020067104e61b"
+    },
+    "tests\\stagingBootstrap.test.js": {
+      "sha256": "03c06d9bfa008267d8fc341fb3dcde33a67f08493bfda4c28e7dd82fa2332735",
+      "issues": [],
+      "lfSha256": "03c06d9bfa008267d8fc341fb3dcde33a67f08493bfda4c28e7dd82fa2332735"
+    },
+    "tests\\stockAdjust.test.js": {
+      "sha256": "5acd62abb98887e524d31c6877762fd65e7af2b9a2ff3434b7d4865d6390b69e",
+      "issues": [],
+      "lfSha256": "5acd62abb98887e524d31c6877762fd65e7af2b9a2ff3434b7d4865d6390b69e"
+    },
+    "tests\\stockAdjustment.unit.test.js": {
+      "sha256": "324b7d033555b1d07a42dc868a47b280ce5ae862dac8585394c3b2a168f88a24",
+      "issues": [],
+      "lfSha256": "324b7d033555b1d07a42dc868a47b280ce5ae862dac8585394c3b2a168f88a24"
+    },
+    "tests\\streamLifecycle.test.js": {
+      "sha256": "8fb42cf37b5d5d3b8546e4cad45f2dd432d9201c5863a7b916d25e03cbc3df37",
+      "issues": [],
+      "lfSha256": "8fb42cf37b5d5d3b8546e4cad45f2dd432d9201c5863a7b916d25e03cbc3df37"
+    },
+    "tests\\transactionTimeout.integration.test.js": {
+      "sha256": "8279ddeeee42aa592e8551c8826ede1389ea73f9c7f38fbe2d570645b132d898",
+      "issues": [],
+      "lfSha256": "8279ddeeee42aa592e8551c8826ede1389ea73f9c7f38fbe2d570645b132d898"
+    },
+    "tests\\unifiedContract.integration.test.js": {
+      "sha256": "41660400074f9d7ef5b95841f8a5d51cbc2647bf38902d4e07ad82986bd8a9f3",
+      "issues": [],
+      "lfSha256": "41660400074f9d7ef5b95841f8a5d51cbc2647bf38902d4e07ad82986bd8a9f3"
+    },
+    "tests\\userAuthorization.test.js": {
+      "sha256": "042e6ec764ad0e37ec45b48405e02607597bcb0083f99a7a7a2dd272256aab08",
+      "issues": [],
+      "lfSha256": "042e6ec764ad0e37ec45b48405e02607597bcb0083f99a7a7a2dd272256aab08"
+    },
+    "tests\\webhook.test.js": {
+      "sha256": "7b366361f3a5ff93f498e30aa425dadd833a484a1ca5275a53bff2e4c829de64",
+      "issues": [],
+      "lfSha256": "7b366361f3a5ff93f498e30aa425dadd833a484a1ca5275a53bff2e4c829de64"
+    }
+  }
+}

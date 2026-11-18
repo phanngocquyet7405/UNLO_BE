@@ -1,0 +1,559 @@
+const joi = require('joi');
+const { validNewPassword } = require('../services/passwordService');
+const emailInput = () => joi.string().trim().email();
+const newPassword = () =>
+  joi
+    .string()
+    .min(8)
+    .max(128)
+    .custom((value, helpers) => (validNewPassword(value) ? value : helpers.error('any.invalid')));
+
+const registerSchema = joi.object({
+  name: joi.string().min(3).max(100).required(),
+  email: emailInput().lowercase().required(),
+  password: newPassword().required(),
+});
+
+const loginSchema = joi.object({
+  rememberMe: joi.boolean().default(false),
+  email: emailInput().required(),
+  password: joi.string().min(6).required(),
+});
+
+const forgotPasswordSchema = joi.object({
+  email: emailInput().required(),
+});
+
+// Token nên gửi trong body (không đi vào URL/log); query ?token= vẫn được chấp nhận để tương thích.
+const resetPasswordSchema = joi.object({
+  password: newPassword().required(),
+  token: joi
+    .string()
+    .pattern(/^[a-f0-9]{40}$/)
+    .optional(),
+});
+
+const updateUserSchema = joi
+  .object({
+    name: joi.string().min(3).max(100).optional(),
+    city: joi.string().max(100).optional(),
+    district: joi.string().max(100).optional(),
+    address: joi.string().max(255).optional(),
+    phone: joi
+      .string()
+      .pattern(/^[0-9()+\s-]{7,20}$/)
+      .optional(),
+  })
+  .min(1);
+
+const idParamSchema = joi.object({
+  _id: joi.string().hex().length(24).required(),
+});
+
+// paymentCode được sinh ở checkOutController.checkOut(): "NULL" + Date.now()
+// + 6 byte hex random viết hoa — pattern dưới đây khớp đúng format đó.
+const paymentCodeParamSchema = joi.object({
+  paymentCode: joi
+    .string()
+    .trim()
+    .pattern(/^NULL[A-Z0-9]+$/)
+    .max(50)
+    .required(),
+});
+
+// Dùng cho POST /admin/orders/:_id/status — CHỈ 3 giá trị này, vì đây là
+// endpoint "generic" không có side-effect (hoàn kho/hoàn coupon/hoàn tiền).
+// "cancelled" đi qua checkOutController.cancelOrder, "processing" từ COD
+// "pending" đi qua confirmCodOrder, "delivered" cho đơn COD đi qua
+// markCodDelivered — cả 3 route đó đã có sẵn, không lặp lại ở đây. Kiểm tra
+// transition CHI TIẾT (đúng trạng thái hiện tại + đúng paymentMethod) nằm ở
+// orderAdminController.updateOrderStatus(), Joi chỉ chặn giá trị rác.
+const orderStatusUpdateSchema = joi.object({
+  status: joi.string().valid('processing', 'shipped', 'delivered').required(),
+});
+
+const jsonOrObject = (innerSchema) =>
+  joi.alternatives().try(
+    innerSchema,
+    joi.string().custom((value, helpers) => {
+      try {
+        const parsed = JSON.parse(value);
+        const { error, value: valid } = innerSchema.validate(parsed);
+        return error ? helpers.error('any.invalid') : valid;
+      } catch {
+        return helpers.error('any.invalid');
+      }
+    }),
+  );
+
+const productSpecsSchema = joi.object({
+  fabricComposition: joi.string().max(300).allow('').optional(),
+  gsmWeight: joi.number().min(0).max(2000).allow(null).optional(),
+  shrinkageRate: joi.string().max(150).allow('').optional(),
+  stitchSpec: joi.string().max(300).allow('').optional(),
+  originNote: joi.string().max(300).allow('').optional(),
+  careInstructions: joi.array().items(joi.string().max(200)).optional(),
+  qcChecklist: joi.array().items(joi.string().max(200)).optional(),
+  certifications: joi.array().items(joi.string().max(150)).optional(),
+});
+
+const costBreakdownSchema = joi.object({
+  materialCost: joi.number().integer().min(0).optional(),
+  manufacturingCost: joi.number().integer().min(0).optional(),
+  qcLogisticsCost: joi.number().integer().min(0).optional(),
+  nullPrice: joi.number().integer().min(0).optional(),
+  traditionalRetailPrice: joi.number().integer().min(0).optional(),
+});
+
+const sizeGuideSchema = joi.object({
+  unit: joi.string().max(20).optional(),
+  modelInfo: joi.string().max(300).allow('').optional(),
+  headers: joi.array().items(joi.string().max(80)).optional(),
+  rows: joi.array().items(joi.array().items(joi.string().max(80))).optional(),
+});
+
+const personalizationConfigSchema = joi.object({
+  enabled: joi.boolean().optional(),
+  allowMonogram: joi.boolean().optional(),
+  allowInnerLabel: joi.boolean().optional(),
+  maxMonogramChars: joi.number().integer().min(1).max(5).optional(),
+  monogramFee: joi.number().integer().min(0).optional(),
+  innerLabelFee: joi.number().integer().min(0).optional(),
+  extraLeadDays: joi.number().integer().min(0).max(30).optional(),
+  allowedPlacements: joi.array().items(joi.string().max(50)).optional(),
+  allowedFonts: joi.array().items(joi.string().max(50)).optional(),
+  allowedThreadColors: joi
+    .array()
+    .items(joi.object({ name: joi.string().required(), hex: joi.string().required() }))
+    .optional(),
+});
+
+const productSchema = joi.object({
+  name: joi.string().min(3).max(150).required(),
+  description: joi.string().max(5000).required(),
+  price: joi.number().integer().positive().required(),
+  category: joi.string().max(100).required(),
+  stock: joi.number().integer().min(0).required(),
+  details: joi.string().max(2000).allow('').optional(),
+  sku: joi.string().max(100).allow('').optional(),
+  salePercent: joi.number().min(0).max(100).optional(),
+  brand: joi.string().max(100).required(),
+  fitType: joi.string().valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard').optional(),
+  materialTag: joi.string().max(80).allow('').optional(),
+  collectionTag: joi.string().max(80).allow('').optional(),
+  isPreOrderOnly: joi.boolean().optional(),
+  ropThreshold: joi.number().integer().min(0).optional(),
+  specs: jsonOrObject(productSpecsSchema).optional(),
+  costBreakdown: jsonOrObject(costBreakdownSchema).optional(),
+  sizeGuide: jsonOrObject(sizeGuideSchema).optional(),
+  personalizationConfig: jsonOrObject(personalizationConfigSchema).optional(),
+});
+
+const productUpdateSchema = joi
+  .object({
+    existingImages: joi
+      .string()
+      .custom((value, helpers) => {
+        try {
+          const ids = JSON.parse(value);
+          return Array.isArray(ids) && ids.every((id) => typeof id === 'string')
+            ? ids
+            : helpers.error('any.invalid');
+        } catch {
+          return helpers.error('any.invalid');
+        }
+      })
+      .optional(),
+    name: joi.string().min(3).max(150).optional(),
+    description: joi.string().max(5000).optional(),
+    price: joi.number().integer().positive().optional(),
+    category: joi.string().max(100).optional(),
+    stock: joi.number().integer().min(0).optional(),
+    details: joi.string().max(2000).allow('').optional(),
+    sku: joi.string().max(100).allow('').optional(),
+    salePercent: joi.number().min(0).max(100).optional(),
+    brand: joi.string().max(100).optional(),
+    fitType: joi.string().valid('regular', 'relaxed', 'boxy', 'slim', 'oversized', 'standard').optional(),
+    materialTag: joi.string().max(80).allow('').optional(),
+    collectionTag: joi.string().max(80).allow('').optional(),
+    isPreOrderOnly: joi.boolean().optional(),
+    ropThreshold: joi.number().integer().min(0).optional(),
+    specs: jsonOrObject(productSpecsSchema).optional(),
+    costBreakdown: jsonOrObject(costBreakdownSchema).optional(),
+    sizeGuide: jsonOrObject(sizeGuideSchema).optional(),
+    personalizationConfig: jsonOrObject(personalizationConfigSchema).optional(),
+  })
+  .min(1);
+
+const updateAddressSchema = joi.object({
+  fullName: joi.string().trim().min(2).max(120).optional(),
+  country: joi.string().max(100).optional(),
+  city: joi.string().max(100).optional(),
+  district: joi.string().max(100).optional(),
+  address: joi.string().max(255).optional(),
+  phone: joi
+    .string()
+    .pattern(/^[0-9()+\s-]{7,20}$/)
+    .optional(),
+});
+
+const brandSchema = joi.object({
+  ownerId: joi.string().hex().length(24).optional(),
+  name: joi.string().min(3).max(100).required(),
+  description: joi.string().max(500).optional(),
+  cityAddress: joi.string().max(255).optional(),
+  logo: joi.forbidden(),
+});
+
+const updateBrandSchema = joi
+  .object({
+    ownerId: joi.string().hex().length(24).optional(),
+    name: joi.string().min(3).max(100).optional(),
+    description: joi.string().max(500).optional(),
+    cityAddress: joi.string().max(255).optional(),
+    logo: joi.forbidden(),
+  })
+  .min(1);
+
+const categorySchema = joi.object({
+  name: joi.string().min(3).max(100).required(),
+  description: joi.string().max(500).optional(),
+  childrenIds: joi.array().items(joi.string().hex().length(24)).optional(),
+});
+
+const updateCategorySchema = joi
+  .object({
+    name: joi.string().min(3).max(100).optional(),
+    description: joi.string().max(500).optional(),
+    childrenIds: joi.array().items(joi.string().hex().length(24)).optional(),
+  })
+  .min(1);
+
+const createBoxSchema = joi.object({
+  ownerId: joi.string().hex().length(24).required(),
+  name: joi.string().min(3).max(100).required(),
+  // Tên field khớp model Box (`descriptions`). Cho phép HTML từ rich-text editor.
+  descriptions: joi.string().max(5000).required(),
+  products: joi
+    .array()
+    .items(
+      joi.object({
+        productId: joi.string().hex().length(24).required(),
+        quantity: joi.number().integer().min(1).required(),
+      }),
+    )
+    .min(1)
+    .required(),
+  stock: joi.number().integer().min(0).required(),
+  isGift: joi.boolean().default(false),
+  // 0 = không giảm giá (FE luôn gửi discountPercent, kể cả khi bằng 0)
+  discountPercent: joi.number().min(0).max(100).default(0),
+  validFrom: joi.date().optional(),
+  validTo: joi
+    .date()
+    .greater('now')
+    .greater(joi.ref('validFrom', { adjust: (v) => v || new Date(0) }))
+    .required(),
+});
+
+const retainedImagesSchema = joi.string().custom((value, helpers) => {
+  try {
+    const images = JSON.parse(value);
+    if (
+      !Array.isArray(images) ||
+      images.some((image) => !image || typeof image.public_id !== 'string')
+    )
+      return helpers.error('any.invalid');
+    return images;
+  } catch {
+    return helpers.error('any.invalid');
+  }
+});
+
+const updateBoxSchema = joi
+  .object({
+    existingImages: retainedImagesSchema.optional(),
+    name: joi.string().min(3).max(100).optional(),
+    descriptions: joi.string().max(5000).optional(),
+    products: joi
+      .array()
+      .items(
+        joi.object({
+          productId: joi.string().hex().length(24).required(),
+          quantity: joi.number().integer().min(1).required(),
+        }),
+      )
+      .min(1)
+      .optional(),
+    stock: joi.number().integer().min(0).optional(),
+    // Không đặt default ở update: gửi thiếu trường thì giữ nguyên giá trị cũ,
+    // không bị reset về false/0 (default còn làm .min(1) luôn thoả).
+    isGift: joi.boolean().optional(),
+    discountPercent: joi.number().min(0).max(100).optional(),
+    validFrom: joi.date().optional(),
+    validTo: joi.date().greater('now').optional(),
+  })
+  .min(1);
+
+const createSubcribePlanSchema = joi.object({
+  userId: joi.string().hex().length(24).required(),
+  boxId: joi.string().hex().length(24).required(),
+  name: joi.string().min(2).max(100).required(),
+  planType: joi.string().valid('1_month', '3_month', '6_month', '12_month').required(),
+  totalDeliveries: joi.number().integer().min(1).required(),
+  shippingAddress: joi
+    .object({
+      address: joi.string().max(255).required(),
+      district: joi.string().max(100).required(),
+      city: joi.string().max(100).required(),
+      country: joi.string().max(100).required(),
+      zipCode: joi.string().max(10).required(),
+      phone: joi
+        .string()
+        .pattern(/^[0-9()+\s-]{7,20}$/)
+        .required(),
+    })
+    .required(),
+  discountPercent: joi.number().min(0).less(100).optional(),
+  gift: joi
+    .array()
+    .items(
+      joi.object({
+        boxId: joi.string().hex().length(24).required(),
+        quantity: joi.number().integer().min(1).default(1).required(),
+      }),
+    )
+    .optional()
+    .default([]),
+});
+
+// Subscription Template Schema (Admin creates)
+// totalDeliveries tính tự động: 1_month=1, 3_month=3, 6_month=6, 12_month=12
+const createSubscriptionTemplateSchema = joi.object({
+  isActive: joi.boolean().default(true),
+  name: joi.string().min(2).max(100).required(),
+  description: joi.string().max(500).allow('').optional(),
+  boxId: joi.string().hex().length(24).required(),
+  planType: joi.string().valid('1_month', '3_month', '6_month', '12_month').required(),
+  discountPercent: joi.number().min(0).less(100).optional(),
+  gift: joi
+    .array()
+    .items(
+      joi.object({
+        boxId: joi.string().hex().length(24).required(),
+        quantity: joi.number().integer().min(1).default(1).required(),
+      }),
+    )
+    .optional()
+    .default([]),
+});
+
+const updateSubscriptionTemplateSchema = joi
+  .object({
+    name: joi.string().min(2).max(100).optional(),
+    description: joi.string().max(500).allow('').optional(),
+    boxId: joi.string().hex().length(24).optional(),
+    planType: joi.string().valid('1_month', '3_month', '6_month', '12_month').optional(),
+    discountPercent: joi.number().min(0).less(100).optional(),
+    isActive: joi.boolean().optional(),
+    gift: joi
+      .array()
+      .items(
+        joi.object({
+          boxId: joi.string().hex().length(24).required(),
+          quantity: joi.number().integer().min(1).default(1).required(),
+        }),
+      )
+      .optional(),
+  })
+  .min(1);
+
+// User Subscription Schema (User subscribes to template)
+const subscribeToTemplateSchema = joi.object({
+  templateId: joi.string().hex().length(24).required(),
+  expectedTotalAmount: joi.number().integer().positive().optional(),
+  shippingAddress: joi
+    .object({
+      address: joi.string().max(255).required(),
+      district: joi.string().max(100).required(),
+      city: joi.string().max(100).required(),
+      country: joi.string().max(100).required(),
+      zipCode: joi.string().max(10).allow('').default(''),
+      phone: joi
+        .string()
+        .pattern(/^[0-9()+\s-]{7,20}$/)
+        .required(),
+    })
+    .required(),
+});
+
+const createSessionSchema = joi.object({
+  addressHash: joi.string().hex().length(64).optional(),
+  addressId: joi.string().hex().length(24).required(),
+  paymentMethod: joi.string().valid('online').default('online').optional(),
+  note: joi.string().max(500).allow('').optional(),
+  quoteFingerprint: joi.string().hex().length(64).optional(),
+  couponCode: joi.string().trim().uppercase().min(3).max(30).optional(),
+  referralCode: joi.string().trim().uppercase().min(3).max(30).allow('').optional(),
+});
+
+const sessionIdParamSchema = joi.object({
+  id: joi.string().trim().min(1).max(100).required(),
+});
+
+const checkoutSchema = joi.object({
+  addressHash: joi.string().hex().length(64).optional(),
+  addressId: joi.string().hex().length(24).required(),
+  paymentMethod: joi.string().valid('cod', 'online').required(),
+  note: joi.string().max(500).allow('').optional(),
+  quoteFingerprint: joi.string().hex().length(64).optional(),
+  couponCode: joi.string().trim().uppercase().min(3).max(30).optional(),
+  referralCode: joi.string().trim().uppercase().min(3).max(30).allow('').optional(),
+});
+
+const { giftSchema, customizationSchema } = require('../services/commercePolicy');
+const cartLineIdField = joi.string().hex().length(64);
+const cartProductIdField = joi.string().hex().length(24);
+const cartQuantityField = joi.number().integer().min(1).max(999);
+
+// PUT /carts/sync — FE gửi toàn bộ giỏ (localStorage), BE thay thế items.
+// items rỗng = xoá giỏ.
+const syncCartSchema = joi.object({
+  version: joi.number().integer().min(0).optional(),
+  items: joi
+    .array()
+    .items(
+      joi
+        .object({
+          productId: cartProductIdField.optional(),
+          boxId: cartProductIdField.optional(),
+          variantId: cartProductIdField.allow(null).optional(),
+          campaignId: cartProductIdField.allow(null).optional(),
+          bundleSelections: joi
+            .array()
+            .items(
+              joi.object({
+                productId: cartProductIdField.required(),
+                variantId: cartProductIdField.required(),
+              }),
+            )
+            .optional(),
+          gift: giftSchema.optional(),
+          customization: customizationSchema.optional(),
+          lineId: cartLineIdField.optional(),
+          quantity: cartQuantityField.required(),
+        })
+        .xor('productId', 'boxId'),
+    )
+    .max(100)
+    .required(),
+});
+
+const addToCartSchema = joi.object({
+  productId: cartProductIdField.required(),
+  quantity: cartQuantityField.default(1),
+});
+
+const updateCartSchema = joi.object({
+  productId: cartProductIdField.optional(),
+  quantity: cartQuantityField.required(),
+});
+
+const couponSchema = joi.object({
+  code: joi.string().trim().uppercase().min(3).max(30).required(),
+  discountType: joi.string().valid('percentage', 'fixed').default('percentage'),
+  discount: joi
+    .number()
+    .positive()
+    .when('discountType', { is: 'percentage', then: joi.number().max(100) })
+    .required(),
+  minOrderValue: joi.number().min(0).default(0),
+  startDate: joi.date().required(),
+  expiresAt: joi.date().greater(joi.ref('startDate')).required(),
+  usageLimit: joi.number().integer().positive().allow(null).default(null),
+  isActive: joi.boolean().default(true),
+});
+
+const updateCouponSchema = joi
+  .object({
+    discountType: joi.string().valid('percentage', 'fixed'),
+    discount: joi.number().positive(),
+    minOrderValue: joi.number().min(0),
+    startDate: joi.date(),
+    expiresAt: joi.date(),
+    usageLimit: joi.number().integer().positive().allow(null),
+    isActive: joi.boolean(),
+  })
+  .min(1);
+
+const sepayWebhookSchema = joi
+  .object({
+    id: joi.number().integer().min(0).max(Number.MAX_SAFE_INTEGER).required(),
+    gateway: joi.string().required(),
+    transactionDate: joi.string().required(),
+    accountNumber: joi.string().required(),
+    code: joi.string().allow(null).optional(),
+    content: joi.string().allow('').required(),
+    transferType: joi.string().valid('in', 'out').required(),
+    transferAmount: joi.number().integer().min(1).max(Number.MAX_SAFE_INTEGER).required(),
+    accumulated: joi.number().optional(),
+    subAccount: joi.string().allow(null).optional(),
+    referenceCode: joi.string().trim().min(1).max(150).required(),
+    description: joi.string().allow('').optional(),
+  })
+  .unknown(true);
+
+const quoteSchema = joi.object({
+  items: syncCartSchema.extract('items'),
+  couponCode: joi.string().trim().uppercase().min(3).max(30).optional(),
+});
+const refundSchema = joi.object({
+  amount: joi.number().integer().min(0).required(),
+  reference: joi.string().trim().min(3).max(150).required(),
+});
+const adjustStockSchema = joi.object({
+  delta: joi.number().integer().invalid(0).min(-1000000).max(1000000).required(),
+  reason: joi.string().trim().max(200).allow('').optional(),
+});
+const cancelSchema = joi.object({ reason: joi.string().trim().max(500).allow('').optional() });
+const subscriptionCartSchema = joi.object({
+  subscriptionPlanId: joi.string().hex().length(24).required(),
+  quantity: cartQuantityField.required(),
+});
+module.exports = {
+  adjustStockSchema,
+  subscriptionCartSchema,
+  quoteSchema,
+  refundSchema,
+  cancelSchema,
+  registerSchema,
+  loginSchema,
+  forgotPasswordSchema,
+  resetPasswordSchema,
+  productSchema,
+  productUpdateSchema,
+  updateAddressSchema,
+  updateBrandSchema,
+  brandSchema,
+  updateUserSchema,
+  idParamSchema,
+  paymentCodeParamSchema,
+  orderStatusUpdateSchema,
+  categorySchema,
+  updateCategorySchema,
+  createBoxSchema,
+  updateBoxSchema,
+  createSubcribePlanSchema,
+  createSubscriptionTemplateSchema,
+  updateSubscriptionTemplateSchema,
+  subscribeToTemplateSchema,
+  checkoutSchema,
+  createSessionSchema,
+  sessionIdParamSchema,
+  sepayWebhookSchema,
+  syncCartSchema,
+  addToCartSchema,
+  updateCartSchema,
+  couponSchema,
+  updateCouponSchema,
+};
